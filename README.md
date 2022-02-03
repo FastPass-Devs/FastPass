@@ -1,3 +1,15 @@
-![ci-badge](https://github.com/ics-software-engineering/meteor-application-template-react/workflows/ci-meteor-application-template-react/badge.svg)
+![ci-FastPass](https://github.com/FastPass-Devs/FastPass/actions/workflows/ci.yml/badge.svg)
 
-For details, please see http://ics-software-engineering.github.io/meteor-application-template-react/
+# FastPass (ICS 427)
+
+## What is pending:
+* Landing Page
+* Home Page / Dashboard
+* Privacy Policy Page
+* Schema for adding infro to database:
+
+## What each team member is working on:
+* Anat - Landing Page
+* Jolie - Home Page / Dashboard
+* Joshua - Privacy Policy Page & Password Generator
+* Justin - Schema for adding info to database
