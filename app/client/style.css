@@ -1,0 +1,13 @@
+.color-template {
+  background-color: black;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.landing {
+  background-color: black;
+  left: 100%;
+  bottom: 100%;
+  width: 100%;
+}
