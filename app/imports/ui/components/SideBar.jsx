@@ -34,8 +34,7 @@ class SideBar extends React.Component {
   <SidebarHeader></SidebarHeader>
   <MenuItem icon={<FiHome />}>Dashboard<Link to="/dashboard"/></MenuItem>
   <SubMenu title="Passwords" icon={<MdPassword />}>
-  <MenuItem icon={<MdAddCircleOutline />}>Add<Link to="/add" /></MenuItem>
-  <MenuItem icon={<AiOutlineEdit />}>Edit<Link to="/edit" /></MenuItem>
+  <MenuItem icon={<AiOutlineEdit />}>Add<Link to="/add" /></MenuItem>
     </SubMenu>
     <SidebarHeader></SidebarHeader>
     <MenuItem icon={<BiCog />}>Settings</MenuItem>
