@@ -3,6 +3,7 @@ import { Meteor } from 'meteor/meteor';
 import { Grid, Segment, Button, Container, Table, Header, Loader } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
+import { withRouter, Link, NavLink } from 'react-router-dom';
 import { Stuffs } from '../../api/stuff/Stuff';
 import StuffItem from '../components/StuffItem';
 import {FiHome} from 'react-icons/fi';
@@ -51,7 +52,7 @@ class Dashboard extends React.Component {
     </Grid.Row>
     <Grid.Row>
       <Header as="h3" style={{paddingTop: '10px'}} textAlign="left">Password List</Header>
-      <Button style={{marginLeft: '10px'}} color="black">Add Button</Button>
+      <Link to="/add"><Button style={{marginLeft: '10px'}} color="black">Add Button</Button></Link>
     </Grid.Row>
     <Grid.Row>
     <Table>

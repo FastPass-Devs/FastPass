@@ -7,12 +7,13 @@ import { Roles } from 'meteor/alanning:roles';
 import { ProSidebar, SidebarHeader, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
 import { FaGem, FaHeart } from "react-icons/fa";
-import { FiHome, FiLogIn, FiLogOut, FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
-import { BiCog } from "react-icons/bi";
+import { FiHome, FiLogIn, FiLogOut, FiShoppingCart, FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
+import { BiCog, BiCategory } from "react-icons/bi";
 import { RiLockPasswordLine } from "react-icons/Ri";
-import {CgProfile} from "react-icons/Cg";
+import {CgProfile, CgPassword} from "react-icons/Cg";
 import {AiOutlineEdit} from "react-icons/Ai";
-import {MdAddCircleOutline, MdPassword} from "react-icons/Md";
+import {TiSocialInstagram} from "react-icons/Ti";
+import {MdAddCircleOutline, MdOutlineTheaterComedy, MdPassword} from "react-icons/Md";
 
 /** The NavBar appears at the top of every page. Rendered by the App Layout component. */
 class SideBar extends React.Component {
@@ -28,13 +29,20 @@ class SideBar extends React.Component {
     </Menu>
   ) : (
     <Menu iconShape="square">
-  <MenuItem textAlign="center" icon={<RiLockPasswordLine />}>Fast Pass</MenuItem>
+  <MenuItem textAlign="center" icon={<RiLockPasswordLine />}>Fast Pass<Link to="/" /></MenuItem>
   <SidebarHeader></SidebarHeader>
   <MenuItem textAlign="center" icon={<CgProfile />}>{this.props.currentUser}</MenuItem>
   <SidebarHeader></SidebarHeader>
   <MenuItem icon={<FiHome />}>Dashboard<Link to="/dashboard"/></MenuItem>
   <SubMenu title="Passwords" icon={<MdPassword />}>
   <MenuItem icon={<AiOutlineEdit />}>Add<Link to="/add" /></MenuItem>
+    </SubMenu>
+  <SubMenu title="Categories" icon={<BiCategory />}>
+  <MenuItem icon={<TiSocialInstagram />}>Social<Link to="/add" /></MenuItem>
+  <MenuItem icon={<FiShoppingCart />}>Retail<Link to="/add" /></MenuItem>
+  <MenuItem icon={<MdOutlineTheaterComedy />}>Entertainment<Link to="/add" /></MenuItem>
+  <MenuItem icon={<CgPassword />}>Miscellaneous<Link to="/add" /></MenuItem>
+
     </SubMenu>
     <SidebarHeader></SidebarHeader>
     <MenuItem icon={<BiCog />}>Settings</MenuItem>
