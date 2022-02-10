@@ -12,4 +12,4 @@
 * Anat - Landing Page
 * Jolie - Home Page / Dashboard
 * Joshua - Privacy Policy Page & Password Generator
-* Justin - Schema for adding info to database
+* Justin - Schema for adding info to database and 0-knowledge encryption log in
