@@ -25,13 +25,13 @@ class App extends React.Component {
     return (
       <Router>
         <div style={{height: '100vw'}}>
+        <Route exact path="/" component={Landing}/>
           <Grid style={{width: '100vw', height: '100%'}}>
+          <Switch>
           <Grid.Column style={{width: '30%'}}>
           <SideBar/>
           </Grid.Column>
-          <Switch>
-          <Grid.Column style={{width: '70%', paddingTop: '40px', height: '100%'}}>
-            <Route exact path="/" component={Landing}/>
+                    <Grid.Column style={{width: '70%', paddingTop: '40px', height: '100%'}}>
             <Route path="/signin" component={Signin}/>
             <Route path="/signup" component={Signup}/>
             <Route path="/signout" component={Signout}/>

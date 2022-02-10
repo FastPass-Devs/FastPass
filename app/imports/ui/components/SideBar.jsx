@@ -19,7 +19,7 @@ import {MdAddCircleOutline, MdOutlineTheaterComedy, MdPassword} from "react-icon
 class SideBar extends React.Component {
   render() {
     return (
-<ProSidebar>
+<ProSidebar className="sidebar">
   {this.props.currentUser === '' ? (
       <Menu iconShape="square">
       <MenuItem textAlign="center" icon={<RiLockPasswordLine />}>Fast Pass<Link to="/" /></MenuItem>
