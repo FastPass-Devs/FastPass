@@ -1,10 +1,10 @@
 import React from 'react';
-import { withRouter, NavLink } from 'react-router-dom';
+import { withRouter, NavLink, Link, Redirect } from 'react-router-dom';
 import { Grid, Form, Image, Message, Segment, Header, Button } from 'semantic-ui-react';
-import NavBar from '../components/NavBar';
 import PropTypes from 'prop-types';
-import { Link, Redirect } from 'react-router-dom';
+
 import { Accounts } from 'meteor/accounts-base';
+import NavBar from '../components/NavBar';
 
 /** A simple static component to render some text for the landing page. */
 class Landing extends React.Component {
@@ -38,60 +38,58 @@ class Landing extends React.Component {
     }
     return (
       <div className="landing">
-      <NavBar />
-      <div className= "landing">
-        <Grid id='landing-page' verticalAlign='middle' textAlign='center' container>
-          <Grid.Column width={4}>
-            <Image  class= "ui top aligned tiny image"  src="/images/myOtherLock.png" />
-            
-          </Grid.Column>
-          <Grid.Column width={6}>
-          <Header as="h2" textAlign="center">
+        <NavBar />
+        <div className= "landing">
+          <Grid id='landing-page' verticalAlign='middle' textAlign='center' container>
+            <Grid.Column width={4}>
+              <Image class= "ui top aligned tiny image" src="/images/myOtherLock.png" />
+
+            </Grid.Column>
+            <Grid.Column width={6}>
+              <Header as="h2" textAlign="center">
               Register your account
-            </Header>
-            <Form onSubmit={this.submit}>
-              <Segment stacked>
-                <Form.Input
-                  label="Email"
-                  id="signup-form-email"
-                  icon="user"
-                  iconPosition="left"
-                  name="email"
-                  type="email"
-                  placeholder="E-mail address"
-                  onChange={this.handleChange}
-                />
-                <Form.Input
-                  label="Password"
-                  id="signup-form-password"
-                  icon="lock"
-                  iconPosition="left"
-                  name="password"
-                  placeholder="Password"
-                  type="password"
-                  onChange={this.handleChange}
-                />
-                <Form.Button id="signup-form-submit" content="Submit"/>
-              </Segment>
-            </Form>
-            <Message>
+              </Header>
+              <Form onSubmit={this.submit}>
+                <Segment stacked>
+                  <Form.Input
+                    label="Email"
+                    id="signup-form-email"
+                    icon="user"
+                    iconPosition="left"
+                    name="email"
+                    type="email"
+                    placeholder="E-mail address"
+                    onChange={this.handleChange}
+                  />
+                  <Form.Input
+                    label="Password"
+                    id="signup-form-password"
+                    icon="lock"
+                    iconPosition="left"
+                    name="password"
+                    placeholder="Password"
+                    type="password"
+                    onChange={this.handleChange}
+                  />
+                  <Form.Button id="signup-form-submit" content="Submit"/>
+                </Segment>
+              </Form>
+              <Message>
               Already have an account? Login <Link to="/signin">here</Link>
-            </Message>
-            {this.state.error === '' ? (
-              ''
-            ) : (
-              <Message
-                error
-                header="Registration was not successful"
-                content={this.state.error}
-              />
-            )}
+              </Message>
+              {this.state.error === '' ? (
+                ''
+              ) : (
+                <Message
+                  error
+                  header="Registration was not successful"
+                  content={this.state.error}
+                />
+              )}
 
-
-
-          </Grid.Column>
-        </Grid>
-      </div>
+            </Grid.Column>
+          </Grid>
+        </div>
       </div>
     );
   }

@@ -4,9 +4,9 @@ import { Grid, Segment, Button, Container, Table, Header, Loader } from 'semanti
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { withRouter, Link, NavLink } from 'react-router-dom';
+import { FiHome } from 'react-icons/fi';
 import { Stuffs } from '../../api/stuff/Stuff';
 import StuffItem from '../components/StuffItem';
-import {FiHome} from 'react-icons/fi';
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class Dashboard extends React.Component {
 
@@ -21,55 +21,55 @@ class Dashboard extends React.Component {
       <Container>
         <Grid>
           <Grid.Row>
-          <Header as="h5" style={{opacity: "50%"}} textAlign="left"><FiHome/> / {this.props.currentUser} / Dashboard</Header>
+            <Header as="h5" style={{ opacity: '50%' }} textAlign="left"><FiHome/> / {this.props.currentUser} / Dashboard</Header>
           </Grid.Row>
           <Grid.Row>
-          <Header as="h3" textAlign="left">Dashboard</Header>
+            <Header as="h3" textAlign="left">Dashboard</Header>
           </Grid.Row>
         </Grid>
         <Grid columns='equal'>
-    <Grid.Row>
-      <Grid.Column>
-        <Segment textAlign="right">Passwords
-        <Header>1</Header>
-        </Segment>
-      </Grid.Column>
-      <Grid.Column>
-        <Segment textAlign="right">Social
-        <Header>2</Header>
-        </Segment>
-      </Grid.Column>
-      <Grid.Column>
-        <Segment textAlign="right">Retail
-        <Header>3</Header>
-        </Segment>
-      </Grid.Column>
-      <Grid.Column>
-        <Segment textAlign="right">Entertainment
-        <Header>4</Header>
-        </Segment>
-      </Grid.Column>
-    </Grid.Row>
-    <Grid.Row>
-      <Header as="h3" style={{paddingTop: '10px'}} textAlign="left">Password List</Header>
-      <Link to="/add"><Button style={{marginLeft: '10px'}} color="black">Add Button</Button></Link>
-    </Grid.Row>
-    <Grid.Row>
-    <Table>
-          <Table.Header>
-            <Table.Row>
-              <Table.HeaderCell>Name</Table.HeaderCell>
-              <Table.HeaderCell>Quantity</Table.HeaderCell>
-              <Table.HeaderCell>Condition</Table.HeaderCell>
-              <Table.HeaderCell>Edit</Table.HeaderCell>
-            </Table.Row>
-          </Table.Header>
-          <Table.Body>
-            {this.props.stuffs.map((stuff) => <StuffItem key={stuff._id} stuff={stuff} />)}
-          </Table.Body>
-        </Table>
-    </Grid.Row>
-    </Grid>
+          <Grid.Row>
+            <Grid.Column>
+              <Segment textAlign="right">Passwords
+                <Header>1</Header>
+              </Segment>
+            </Grid.Column>
+            <Grid.Column>
+              <Segment textAlign="right">Social
+                <Header>2</Header>
+              </Segment>
+            </Grid.Column>
+            <Grid.Column>
+              <Segment textAlign="right">Retail
+                <Header>3</Header>
+              </Segment>
+            </Grid.Column>
+            <Grid.Column>
+              <Segment textAlign="right">Entertainment
+                <Header>4</Header>
+              </Segment>
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Header as="h3" style={{ paddingTop: '10px' }} textAlign="left">Password List</Header>
+            <Link to="/add"><Button style={{ marginLeft: '10px' }} color="black">Add Button</Button></Link>
+          </Grid.Row>
+          <Grid.Row>
+            <Table>
+              <Table.Header>
+                <Table.Row>
+                  <Table.HeaderCell>Name</Table.HeaderCell>
+                  <Table.HeaderCell>Quantity</Table.HeaderCell>
+                  <Table.HeaderCell>Condition</Table.HeaderCell>
+                  <Table.HeaderCell>Edit</Table.HeaderCell>
+                </Table.Row>
+              </Table.Header>
+              <Table.Body>
+                {this.props.stuffs.map((stuff) => <StuffItem key={stuff._id} stuff={stuff} />)}
+              </Table.Body>
+            </Table>
+          </Grid.Row>
+        </Grid>
       </Container>
     );
   }
