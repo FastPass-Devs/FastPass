@@ -6,10 +6,10 @@
 * Landing Page
 * Home Page / Dashboard
 * Privacy Policy Page
-* Schema for adding infro to database:
+* Schema for adding info to database:
 
 ## What each team member is working on:
 * Anat - Landing Page
 * Jolie - Home Page / Dashboard
-* Joshua - Privacy Policy Page, Password Generator and TOS
+* Joshua - Privacy Policy Page, Password Generator, and TOS
 * Justin - Schema for adding info to database and 0-knowledge encryption log in
