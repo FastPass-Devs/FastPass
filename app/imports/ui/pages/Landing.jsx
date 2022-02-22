@@ -37,8 +37,6 @@ class Landing extends React.Component {
       return <Redirect to={from}/>;
     }
     return (
-      <div className="landing">
-      <NavBar />
       <div className= "landing">
         <Grid id='landing-page' verticalAlign='middle' textAlign='center' container>
           <Grid.Column width={4}>
@@ -91,7 +89,6 @@ class Landing extends React.Component {
 
           </Grid.Column>
         </Grid>
-      </div>
       </div>
     );
   }

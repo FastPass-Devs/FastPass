@@ -26,17 +26,18 @@ class App extends React.Component {
     return (
       <Router>
         <div style={{ height: '100vw' }}>
-          <Route exact path="/" component={Landing}/>
-          <Route path="/privacy-policy" component={PrivacyPolicy}/>
-          <Grid style={{ width: '100vw', height: '100%' }}>
-            <Switch>
-              <Grid.Column style={{ width: '30%' }}>
+        <Grid style={{ width: '100vw', height: '100%' }}>
+        <Grid.Column style={{ width: '30%' }}>
                 <SideBar/>
-              </Grid.Column>
+          </Grid.Column>
+
+            <Switch>
               <Grid.Column style={{ width: '70%', paddingTop: '40px', height: '100%' }}>
-                <Route path="/signin" component={Signin}/>
-                <Route path="/signup" component={Signup}/>
-                <Route path="/signout" component={Signout}/>
+              <Route exact path="/" component={Landing}/>
+          <Route path="/privacy-policy" component={PrivacyPolicy}/>
+          <Route path="/signin" component={Signin}/>
+          <Route path="/signup" component={Signup}/>
+          <Route path="/signout" component={Signout}/>
                 <ProtectedRoute path="/list" component={ListStuff}/>
                 <ProtectedRoute path="/dashboard" component={Dashboard}/>
                 <ProtectedRoute path="/add" component={AddStuff}/>

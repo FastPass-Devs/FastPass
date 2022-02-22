@@ -13,7 +13,7 @@ import { RiLockPasswordLine } from "react-icons/Ri";
 import {CgProfile, CgPassword} from "react-icons/Cg";
 import {AiOutlineEdit} from "react-icons/Ai";
 import {TiSocialInstagram} from "react-icons/Ti";
-import {MdAddCircleOutline, MdOutlineTheaterComedy, MdPassword} from "react-icons/Md";
+import {MdAddCircleOutline, MdOutlinePrivacyTip, MdOutlineTheaterComedy, MdPassword} from "react-icons/Md";
 
 /** The NavBar appears at the top of every page. Rendered by the App Layout component. */
 class SideBar extends React.Component {
@@ -26,6 +26,7 @@ class SideBar extends React.Component {
       <SidebarHeader></SidebarHeader>
     <MenuItem icon={<FiLogIn />}>Sign in<Link to="/signin" /></MenuItem>
     <MenuItem icon={<CgProfile />}>Register<Link to="/signup" /></MenuItem>
+    <MenuItem icon={<MdOutlinePrivacyTip />}>Privacy Policy<Link to="/privacy-policy" /></MenuItem>
     </Menu>
   ) : (
     <Menu iconShape="square">
