@@ -6,7 +6,6 @@
 * Landing Page
 * Home Page / Dashboard
 * Privacy Policy Page
-* Schema for adding info to database:
 
 ## What each team member is working on:
 * Anat - Landing Page
