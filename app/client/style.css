@@ -1,0 +1,23 @@
+
+.color-template {
+  background-color: black;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.landing {
+  background-color: #f0f2f5;
+  left: 100%;
+  bottom: 100%;
+  height: 100%;
+  width: 100%;
+}
+.sidebar{
+  position: fixed;
+}
+
+body {
+    background-color: #f0f2f5 !important;
+}
+

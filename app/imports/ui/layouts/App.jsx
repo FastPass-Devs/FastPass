@@ -4,12 +4,16 @@ import { Meteor } from 'meteor/meteor';
 import 'semantic-ui-css/semantic.css';
 import { Roles } from 'meteor/alanning:roles';
 import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-import NavBar from '../components/NavBar';
-import Footer from '../components/Footer';
+import { Grid } from 'semantic-ui-react';
+// import NavBar from '../components/NavBar';
+import SideBar from '../components/SideBar';
+// import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
 import ListStuff from '../pages/ListStuff';
 import ListStuffAdmin from '../pages/ListStuffAdmin';
 import AddStuff from '../pages/AddStuff';
+import PrivacyPolicy from '../pages/PrivacyPolicy';
+import Dashboard from '../pages/Dashboard';
 import EditStuff from '../pages/EditStuff';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
@@ -21,20 +25,27 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <div>
-          <NavBar/>
-          <Switch>
-            <Route exact path="/" component={Landing}/>
-            <Route path="/signin" component={Signin}/>
-            <Route path="/signup" component={Signup}/>
-            <Route path="/signout" component={Signout}/>
-            <ProtectedRoute path="/list" component={ListStuff}/>
-            <ProtectedRoute path="/add" component={AddStuff}/>
-            <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
-            <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
-            <Route component={NotFound}/>
-          </Switch>
-          <Footer/>
+        <div style={{ height: '100vw' }}>
+          <Route exact path="/" component={Landing}/>
+          <Route path="/privacy-policy" component={PrivacyPolicy}/>
+          <Grid style={{ width: '100vw', height: '100%' }}>
+            <Switch>
+              <Grid.Column style={{ width: '30%' }}>
+                <SideBar/>
+              </Grid.Column>
+              <Grid.Column style={{ width: '70%', paddingTop: '40px', height: '100%' }}>
+                <Route path="/signin" component={Signin}/>
+                <Route path="/signup" component={Signup}/>
+                <Route path="/signout" component={Signout}/>
+                <ProtectedRoute path="/list" component={ListStuff}/>
+                <ProtectedRoute path="/dashboard" component={Dashboard}/>
+                <ProtectedRoute path="/add" component={AddStuff}/>
+                <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
+                <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
+              </Grid.Column>
+              <Route component={NotFound}/>
+            </Switch>
+          </Grid>
         </div>
       </Router>
     );
