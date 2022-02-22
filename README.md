@@ -2,10 +2,11 @@
 
 # FastPass (ICS 427)
 
+## What is completed:
+* Meteor user collection schema
+
 ## What is pending:
-* Landing Page
-* Home Page / Dashboard
-* Privacy Policy Page
+* Hook up sign-up and log-in with Meteor collection
 
 ## What each team member is working on:
 * Anat - Landing Page
@@ -13,5 +14,4 @@
 * Joshua - Privacy Policy Page, Password Generator, and TOS
 * Justin - 0-knowledge encryption log in
 
-## What is completed:
-* Meteor collections schema
+
