@@ -7,10 +7,17 @@
 
 ## What is pending:
 * Hook up sign-up and log-in with Meteor collection
+* Custom field
+* Testcafe testing
+* Master password hint
+* Multi-face authentication
+* Autofill login information
+* Export user's information
+* Encryption of data
 
 ## What each team member is working on:
 * Anat - Landing Page
-* Jolie - Home Page / Dashboard
+* Jolie - Home Page/Dashboard, Sidebar
 * Joshua - Privacy Policy Page, Password Generator, and TOS
 * Justin - 0-knowledge encryption log in
 
