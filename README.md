@@ -12,4 +12,7 @@
 * Anat - Landing Page
 * Jolie - Home Page / Dashboard
 * Joshua - Privacy Policy Page, Password Generator, and TOS
-* Justin - Schema for adding info to database and 0-knowledge encryption log in
+* Justin - 0-knowledge encryption log in
+
+## What is completed:
+* Meteor collections schema
