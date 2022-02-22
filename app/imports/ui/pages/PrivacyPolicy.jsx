@@ -1,11 +1,15 @@
 import React from 'react';
 import { Container, Divider, Header, List } from 'semantic-ui-react';
+import NavBar from '../components/NavBar';
 
 /** Render a static Privacy Policy page. */
 class PrivacyPolicy extends React.Component {
   render() {
     return (
       <Container text>
+              <div className="landing">
+      <NavBar />
+     </div>
         <Header as='h1'>Privacy Policy</Header>
         <p>
           FastPass and its organization (“FastPass-Devs”, “we,” or “us“) provides this privacy policy in order to share what type of information we collect,

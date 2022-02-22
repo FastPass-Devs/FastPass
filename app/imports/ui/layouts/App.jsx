@@ -27,6 +27,7 @@ class App extends React.Component {
       <Router>
         <div style={{ height: '100vw' }}>
           <Route exact path="/" component={Landing}/>
+          <Route path="/privacy-policy" component={PrivacyPolicy}/>
           <Grid style={{ width: '100vw', height: '100%' }}>
             <Switch>
               <Grid.Column style={{ width: '30%' }}>
@@ -36,7 +37,6 @@ class App extends React.Component {
                 <Route path="/signin" component={Signin}/>
                 <Route path="/signup" component={Signup}/>
                 <Route path="/signout" component={Signout}/>
-                <Route path="/privacy-policy" component={PrivacyPolicy}/>
                 <ProtectedRoute path="/list" component={ListStuff}/>
                 <ProtectedRoute path="/dashboard" component={Dashboard}/>
                 <ProtectedRoute path="/add" component={AddStuff}/>
