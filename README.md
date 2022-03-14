@@ -4,7 +4,7 @@
 
 ## What is completed:
 * Meteor user collection schema
-* Privacy Policy Page
+* Initial Privacy Policy Page
 
 ## What is pending:
 * Hook up sign-up and log-in with Meteor collection
