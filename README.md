@@ -4,6 +4,7 @@
 
 ## What is completed:
 * Meteor user collection schema
+* Privacy Policy Page
 
 ## What is pending:
 * Hook up sign-up and log-in with Meteor collection
@@ -14,11 +15,12 @@
 * Autofill login information
 * Export user's information
 * Encryption of data
+* Page for Terms of Service
 
 ## What each team member is working on:
 * Anat - Landing Page
 * Jolie - Home Page/Dashboard, Sidebar
-* Joshua - Privacy Policy Page, Password Generator, and TOS
+* Joshua - Password Generator, and TOS
 * Justin - 0-knowledge encryption log in
 
 
