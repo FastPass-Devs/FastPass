@@ -5,18 +5,20 @@
 ## ASSIGNMENT 3 (3/28)
 ### Progress:
 * Initial Privacy Policy Page
+* Landing Page
+* Home Page/Dashboard
 
 ### Link:
 https://github.com/FastPass-Devs/FastPass
 
 ### Tasks and responsibilities:
 * Anat:
-    * New Completions - 
+    * New Completions - Landing Page
     * Current - Edit/Delete, Forms, & Collections
     * Next -
 
 * Jolie:
-    * New Completions - 
+    * New Completions - Home Page/Dashboard
     * Current - Edit/Delete, Forms, & Collections
     * Next -
 
@@ -39,7 +41,6 @@ https://github.com/FastPass-Devs/FastPass
 ## ASSIGNMENT 2 (2/21)
 ### What is completed:
 * Meteor user collection schema
-* Initial Privacy Policy Page
 
 ### What is pending:
 * Hook up sign-up and log-in with Meteor collection
