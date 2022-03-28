@@ -28,7 +28,7 @@ Updated: 3/28/2022
 * Page for Terms of Service
 * Various bug fixes
 
-## What each team member has/is working on:
+## What each team member has worked on:
 * Anat - Landing Page, Deployment
 * Jolie - Home Page/Dashboard, Collections, Sidebar
 * Joshua - Password Generator, and TOS
