@@ -14,6 +14,7 @@ import ListStuffAdmin from '../pages/ListStuffAdmin';
 import AddStuff from '../pages/AddStuff';
 import PrivacyPolicy from '../pages/PrivacyPolicy';
 import Dashboard from '../pages/Dashboard';
+import PasswordGenerator from '../pages/PasswordGenerator';
 import EditStuff from '../pages/EditStuff';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
@@ -42,6 +43,7 @@ class App extends React.Component {
                 <ProtectedRoute path="/dashboard" component={Dashboard}/>
                 <ProtectedRoute path="/add" component={AddStuff}/>
                 <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
+                <ProtectedRoute path="/password-generator" component={PasswordGenerator}/>
                 <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
               </Grid.Column>
               <Route component={NotFound}/>
