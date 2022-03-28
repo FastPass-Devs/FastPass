@@ -27,11 +27,10 @@ class App extends React.Component {
     return (
       <Router>
         <div style={{ height: '100vw' }}>
-          <Grid style={{ width: '100vw', height: '100%' }}>
-            <Grid.Column style={{ width: '30%' }}>
-              <SideBar/>
-            </Grid.Column>
-
+        <Grid style={{ width: '100vw', height: '100%' }}>
+        <Grid.Column style={{ width: '30%' }}>
+                <SideBar/>
+          </Grid.Column>
             <Switch>
               <Grid.Column style={{ width: '70%', paddingTop: '40px', height: '100%' }}>
                 <Route exact path="/" component={Landing}/>

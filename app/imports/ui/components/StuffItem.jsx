@@ -8,9 +8,10 @@ class StuffItem extends React.Component {
   render() {
     return (
       <Table.Row>
-        <Table.Cell>{this.props.stuff.name}</Table.Cell>
-        <Table.Cell>{this.props.stuff.quantity}</Table.Cell>
-        <Table.Cell>{this.props.stuff.condition}</Table.Cell>
+        <Table.Cell>{this.props.stuff.site}</Table.Cell>
+        <Table.Cell>{this.props.stuff.username}</Table.Cell>
+        <Table.Cell>{this.props.stuff.password}</Table.Cell>
+        <Table.Cell>{this.props.stuff.notes}</Table.Cell>
         <Table.Cell>
           <Link to={`/edit/${this.props.stuff._id}`}>Edit</Link>
         </Table.Cell>
@@ -22,9 +23,11 @@ class StuffItem extends React.Component {
 // Require a document to be passed to this component.
 StuffItem.propTypes = {
   stuff: PropTypes.shape({
-    name: PropTypes.string,
-    quantity: PropTypes.number,
-    condition: PropTypes.string,
+    username: PropTypes.string,
+    site: PropTypes.number,
+    password: PropTypes.string,
+    category: PropTypes.string,
+    notes: PropTypes.string,
     _id: PropTypes.string,
   }).isRequired,
 };

@@ -5,9 +5,7 @@
   ],
 
   "defaultData": [
-    { "name": "Basket", "quantity": 3, "owner": "john@foo.com", "condition": "excellent" },
-    { "name": "Bicycle", "quantity": 2, "owner": "john@foo.com", "condition": "poor" },
-    { "name": "Banana", "quantity": 2, "owner": "admin@foo.com", "condition": "good" },
-    { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
+    { "site": "Laulima", "username": "Test", "password": "42424", "notes": "this is my test", "category": "Social", "owner": "john@foo.com" },
+    { "site": "Netflix", "username": "secondTest", "password": "79797", "notes": "a second test", "category": "Retail", "owner": "john@foo.com"}
   ]
 }
