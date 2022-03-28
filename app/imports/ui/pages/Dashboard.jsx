@@ -31,22 +31,22 @@ class Dashboard extends React.Component {
     <Grid.Row>
       <Grid.Column>
         <Segment textAlign="right">Passwords
-        <Header>1</Header>
+        <Header>{this.props.numStuffs}</Header>
         </Segment>
       </Grid.Column>
       <Grid.Column>
         <Segment textAlign="right">Social
-        <Header>2</Header>
+        <Header>{this.props.numSocial}</Header>
         </Segment>
       </Grid.Column>
       <Grid.Column>
         <Segment textAlign="right">Retail
-        <Header>3</Header>
+        <Header>{this.props.numRetail}</Header>
         </Segment>
       </Grid.Column>
       <Grid.Column>
         <Segment textAlign="right">Entertainment
-        <Header>4</Header>
+        <Header>{this.props.numEntertainment}</Header>
         </Segment>
       </Grid.Column>
     </Grid.Row>
@@ -58,9 +58,10 @@ class Dashboard extends React.Component {
     <Table>
           <Table.Header>
             <Table.Row>
-              <Table.HeaderCell>Name</Table.HeaderCell>
-              <Table.HeaderCell>Quantity</Table.HeaderCell>
-              <Table.HeaderCell>Condition</Table.HeaderCell>
+              <Table.HeaderCell>Site</Table.HeaderCell>
+              <Table.HeaderCell>Username</Table.HeaderCell>
+              <Table.HeaderCell>Password</Table.HeaderCell>
+              <Table.HeaderCell>Notes</Table.HeaderCell>
               <Table.HeaderCell>Edit</Table.HeaderCell>
             </Table.Row>
           </Table.Header>
@@ -92,9 +93,22 @@ export default withTracker(() => {
   const currentUser = Meteor.user() ? Meteor.user().username : '';
 
   const stuffs = Stuffs.collection.find({}).fetch();
+
+  const numStuffs = Stuffs.collection.find({}).count();
+
+  const numSocial =  Stuffs.collection.find({'category': 'Social'}).count();
+
+  const numRetail =  Stuffs.collection.find({'category': 'Retail'}).count();
+
+  const numEntertainment =  Stuffs.collection.find({'category': 'Entertainment'}).count();
+
   return {
     stuffs,
+    numStuffs,
     ready,
     currentUser,
+    numSocial,
+    numRetail,
+    numEntertainment
   };
 })(Dashboard);

@@ -15,8 +15,8 @@ class EditStuff extends React.Component {
 
   // On successful submit, insert the data.
   submit(data) {
-    const { name, quantity, condition, _id } = data;
-    Stuffs.collection.update(_id, { $set: { name, quantity, condition } }, (error) => (error ?
+    const { site, username, password, notes, category, _id } = data;
+    Stuffs.collection.update(_id, { $set: { site, username, password, notes, category } }, (error) => (error ?
       swal('Error', error.message, 'error') :
       swal('Success', 'Item updated successfully', 'success')));
   }
@@ -34,9 +34,11 @@ class EditStuff extends React.Component {
           <Header as="h2" textAlign="center">Edit Stuff</Header>
           <AutoForm schema={bridge} onSubmit={data => this.submit(data)} model={this.props.doc}>
             <Segment>
-              <TextField name='name'/>
-              <NumField name='quantity' decimal={false}/>
-              <SelectField name='condition'/>
+              <TextField name='site'/>
+              <TextField name='username'/>
+              <TextField name='password'/>
+              <TextField name='notes'/>
+              <SelectField name='category'/>
               <SubmitField value='Submit'/>
               <ErrorsField/>
               <HiddenField name='owner' />

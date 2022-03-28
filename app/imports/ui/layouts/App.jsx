@@ -30,7 +30,6 @@ class App extends React.Component {
         <Grid.Column style={{ width: '30%' }}>
                 <SideBar/>
           </Grid.Column>
-
             <Switch>
               <Grid.Column style={{ width: '70%', paddingTop: '40px', height: '100%' }}>
               <Route exact path="/" component={Landing}/>
