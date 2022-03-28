@@ -21,3 +21,7 @@ body {
     background-color: #f0f2f5 !important;
 }
 
+.password-generator {
+  max-width: 50rem;
+}
+
