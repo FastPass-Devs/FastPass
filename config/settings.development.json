@@ -6,6 +6,8 @@
 
   "defaultData": [
     { "site": "Laulima", "username": "Test", "password": "42424", "notes": "this is my test", "category": "Social", "owner": "john@foo.com" },
-    { "site": "Netflix", "username": "secondTest", "password": "79797", "notes": "a second test", "category": "Retail", "owner": "john@foo.com"}
+    { "site": "Netflix", "username": "secondTest", "password": "79797", "notes": "a second test", "category": "Retail", "owner": "john@foo.com"},
+    { "site": "Laulima", "username": "Test", "password": "42424", "notes": "this is my test", "category": "Social", "owner": "admin@foo.com" },
+    { "site": "Netflix", "username": "secondTest", "password": "79797", "notes": "a second test", "category": "Retail", "owner": "admin@foo.com"}
   ]
 }
