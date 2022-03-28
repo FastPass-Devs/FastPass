@@ -2,49 +2,23 @@
 
 # FastPass (ICS 427)
 
-## ASSIGNMENT 3 (3/28)
-### Progress:
-* Initial Privacy Policy Page
-* Landing Page
-* Home Page/Dashboard
+Updated: 3/28/2022
 
-### Link:
-https://github.com/FastPass-Devs/FastPass
-
-### Tasks and responsibilities:
-* Anat:
-    * New Completions - Landing Page
-    * Current - Edit/Delete, Forms, & Collections
-    * Next -
-
-* Jolie:
-    * New Completions - Home Page/Dashboard
-    * Current - Edit/Delete, Forms, & Collections
-    * Next -
-
-* Joshua:
-    * New Completions - Initial Privacy Policy Page
-    * Current - Password Generator
-    * Next -
-
-* Justin:
-    * New Completions - 
-    * Current - 0-knowledge encryption log in
-    * Next -
-
-### Pending: 
-* Autofill login information
-* Export user's information
-* Encryption of data
-* Page for Terms of Service
-
-## ASSIGNMENT 2 (2/21)
-### What is completed:
+## What is completed:
 * Meteor user collection schema
+* Passwords collection schema
+* Forms for adding and editing passwords
+* Dashboard display of account information
+* Password generator
+* Password category counters
+* Initial Privacy Policy Page
+* Login system
+* Deployment
 
 ### What is pending:
 * Hook up sign-up and log-in with Meteor collection
 * Custom field
+* Category display
 * Testcafe testing
 * Master password hint
 * Multi-face authentication
@@ -52,10 +26,11 @@ https://github.com/FastPass-Devs/FastPass
 * Export user's information
 * Encryption of data
 * Page for Terms of Service
+* Various bug fixes
 
-### What each team member is working on:
-* Anat - Landing Page
-* Jolie - Home Page/Dashboard, Sidebar
+## What each team member has/is working on:
+* Anat - Landing Page, Deployment
+* Jolie - Home Page/Dashboard, Collections, Sidebar
 * Joshua - Password Generator, and TOS
 * Justin - 0-knowledge encryption log in
 
