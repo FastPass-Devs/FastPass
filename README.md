@@ -1,4 +1,4 @@
-![ci-FastPass](https://github.com/FastPass-Devs/FastPass/actions/workflows/ci.yml/badge.svg)
+![ci-badge](https://github.com/FastPass-Devs/FastPass/workflows/ci-FastPass/badge.svg)
 
 # FastPass (ICS 427)
 
