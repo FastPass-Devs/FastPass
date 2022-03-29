@@ -28,49 +28,49 @@ class Dashboard extends React.Component {
           </Grid.Row>
         </Grid>
         <Grid columns='equal'>
-    <Grid.Row>
-      <Grid.Column>
-        <Segment textAlign="right">Passwords
-        <Header>{this.props.numStuffs}</Header>
-        </Segment>
-      </Grid.Column>
-      <Grid.Column>
-        <Segment textAlign="right">Social
-        <Header>{this.props.numSocial}</Header>
-        </Segment>
-      </Grid.Column>
-      <Grid.Column>
-        <Segment textAlign="right">Retail
-        <Header>{this.props.numRetail}</Header>
-        </Segment>
-      </Grid.Column>
-      <Grid.Column>
-        <Segment textAlign="right">Entertainment
-        <Header>{this.props.numEntertainment}</Header>
-        </Segment>
-      </Grid.Column>
-    </Grid.Row>
-    <Grid.Row>
-      <Header as="h3" style={{paddingTop: '10px'}} textAlign="left">Password List</Header>
-      <Link to="/add"><Button style={{marginLeft: '10px'}} color="black">Add Button</Button></Link>
-    </Grid.Row>
-    <Grid.Row>
-    <Table>
-          <Table.Header>
-            <Table.Row>
-              <Table.HeaderCell>Site</Table.HeaderCell>
-              <Table.HeaderCell>Username</Table.HeaderCell>
-              <Table.HeaderCell>Password</Table.HeaderCell>
-              <Table.HeaderCell>Notes</Table.HeaderCell>
-              <Table.HeaderCell>Edit</Table.HeaderCell>
-            </Table.Row>
-          </Table.Header>
-          <Table.Body>
-            {this.props.stuffs.map((stuff) => <StuffItem key={stuff._id} stuff={stuff} />)}
-          </Table.Body>
-        </Table>
-    </Grid.Row>
-    </Grid>
+          <Grid.Row>
+            <Grid.Column>
+              <Segment textAlign="right">Passwords
+                <Header>{this.props.stuffs.numStuffs}</Header>
+              </Segment>
+            </Grid.Column>
+            <Grid.Column>
+              <Segment textAlign="right">Social
+                <Header>{this.props.stuffs.numSocial}</Header>
+              </Segment>
+            </Grid.Column>
+            <Grid.Column>
+              <Segment textAlign="right">Retail
+                <Header>{this.props.stuffs.numRetail}</Header>
+              </Segment>
+            </Grid.Column>
+            <Grid.Column>
+              <Segment textAlign="right">Entertainment
+                <Header>{this.props.stuffs.numEntertainment}</Header>
+              </Segment>
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Header as="h3" style={{ paddingTop: '10px' }} textAlign="left">Password List</Header>
+            <Link to="/add"><Button style={{ marginLeft: '10px' }} color="black">Add Button</Button></Link>
+          </Grid.Row>
+          <Grid.Row>
+            <Table>
+              <Table.Header>
+                <Table.Row>
+                  <Table.HeaderCell>Site</Table.HeaderCell>
+                  <Table.HeaderCell>Username</Table.HeaderCell>
+                  <Table.HeaderCell>Password</Table.HeaderCell>
+                  <Table.HeaderCell>Notes</Table.HeaderCell>
+                  <Table.HeaderCell>Edit</Table.HeaderCell>
+                </Table.Row>
+              </Table.Header>
+              <Table.Body>
+                {this.props.stuffs.map((stuff) => <StuffItem key={stuff._id} stuff={stuff} />)}
+              </Table.Body>
+            </Table>
+          </Grid.Row>
+        </Grid>
       </Container>
     );
   }
@@ -96,11 +96,11 @@ export default withTracker(() => {
 
   const numStuffs = Stuffs.collection.find({}).count();
 
-  const numSocial =  Stuffs.collection.find({'category': 'Social'}).count();
+  const numSocial = Stuffs.collection.find({ category: 'Social' }).count();
 
-  const numRetail =  Stuffs.collection.find({'category': 'Retail'}).count();
+  const numRetail = Stuffs.collection.find({ category: 'Retail' }).count();
 
-  const numEntertainment =  Stuffs.collection.find({'category': 'Entertainment'}).count();
+  const numEntertainment = Stuffs.collection.find({ category: 'Entertainment' }).count();
 
   return {
     stuffs,
@@ -109,6 +109,6 @@ export default withTracker(() => {
     currentUser,
     numSocial,
     numRetail,
-    numEntertainment
+    numEntertainment,
   };
 })(Dashboard);
