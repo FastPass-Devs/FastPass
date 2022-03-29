@@ -12,8 +12,8 @@ Updated: 3/28/2022
 * Password category counters
 
 ## Link
-Repo: https://github.com/FastPass-Devs/FastPass/
-Live site: http://fastpass.meteorapp.com/
+* Repo: https://github.com/FastPass-Devs/FastPass/
+* Live site: http://fastpass.meteorapp.com/
 
 ## Pending
 * Master password hint
