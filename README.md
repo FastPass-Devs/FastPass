@@ -19,7 +19,7 @@ Updated: 3/28/2022
 
 ### Pending
 * Master password hint
-* Multi-face authentication
+* Multi-factor authentication
 * Autofill login information
 * Export user's information
 * Encryption of data
@@ -58,7 +58,7 @@ ___
 * Category display
 * Testcafe testing
 * Master password hint
-* Multi-face authentication
+* Multi-factor authentication
 * Autofill login information
 * Export user's information
 * Encryption of data
