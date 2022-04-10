@@ -1,27 +1,27 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Grid, Segment, Button, Container, Table, Header, Loader } from 'semantic-ui-react';
+import { Grid, Button, Container, Table, Header, Loader } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { FiHome } from 'react-icons/fi';
+import { ExportToCsv } from 'export-to-csv';
 import { Stuffs } from '../../api/stuff/Stuff';
 import StuffItem from '../components/StuffItem';
-import { ExportToCsv } from 'export-to-csv';
 
-const options = { 
-    fieldSeparator: ',',
-    quoteStrings: '"',
-    decimalSeparator: '.',
-    showLabels: true, 
-    showTitle: true,
-    title: 'Misc. Passwords List',
-    useTextFile: false,
-    filename: 'Misc.PasswordsList',
-    useBom: true,
-    useKeysAsHeaders: true,
-    // headers: ['Column 1', 'Column 2', etc...] <-- Won't work with useKeysAsHeaders present!
-  };
+const options = {
+  fieldSeparator: ',',
+  quoteStrings: '"',
+  decimalSeparator: '.',
+  showLabels: true,
+  showTitle: true,
+  title: 'Misc. Passwords List',
+  useTextFile: false,
+  filename: 'Misc.PasswordsList',
+  useBom: true,
+  useKeysAsHeaders: true,
+  // headers: ['Column 1', 'Column 2', etc...] <-- Won't work with useKeysAsHeaders present!
+};
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class Misc extends React.Component {
@@ -49,7 +49,7 @@ class Misc extends React.Component {
           <Grid.Row>
             <Header as="h3" style={{ paddingTop: '10px' }} textAlign="left">Miscellaneous Category: Password List</Header>
             <Link to="/add"><Button style={{ marginLeft: '10px' }} color="black">Add Button</Button></Link>
-            <Link to="#"><Button onClick={() => {this.downloadData()}} style={{ marginLeft: '10px' }} color="blue">Download List</Button></Link>
+            <Link to="#"><Button onClick={() => { this.downloadData(); }} style={{ marginLeft: '10px' }} color="blue">Download List</Button></Link>
           </Grid.Row>
           <Grid.Row>
             <Table>

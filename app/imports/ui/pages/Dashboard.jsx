@@ -5,15 +5,15 @@ import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { FiHome } from 'react-icons/fi';
+import { ExportToCsv } from 'export-to-csv';
 import { Stuffs } from '../../api/stuff/Stuff';
 import StuffItem from '../components/StuffItem';
-import { ExportToCsv } from 'export-to-csv';
 
-const options = { 
+const options = {
   fieldSeparator: ',',
   quoteStrings: '"',
   decimalSeparator: '.',
-  showLabels: true, 
+  showLabels: true,
   showTitle: true,
   title: 'Passwords List',
   useTextFile: false,
@@ -74,7 +74,7 @@ class Dashboard extends React.Component {
           <Grid.Row>
             <Header as="h3" style={{ paddingTop: '10px' }} textAlign="left">Password List</Header>
             <Link to="/add"><Button style={{ marginLeft: '10px' }} color="black">Add Button</Button></Link>
-            <Link to="#"><Button onClick={() => {this.downloadData()}} style={{ marginLeft: '10px' }} color="blue">Download List</Button></Link>
+            <Link to="#"><Button onClick={() => { this.downloadData(); }} style={{ marginLeft: '10px' }} color="blue">Download List</Button></Link>
           </Grid.Row>
           <Grid.Row>
             <Table>
@@ -103,6 +103,11 @@ Dashboard.propTypes = {
   stuffs: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
   currentUser: PropTypes.string,
+  numStuffs: PropTypes.number,
+  numSocial: PropTypes.number,
+  numEntertainment: PropTypes.number,
+  numRetail: PropTypes.number,
+
 };
 
 // withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker

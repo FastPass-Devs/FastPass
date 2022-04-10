@@ -25,9 +25,6 @@ import Entertainment from '../pages/Entertainment';
 import Retail from '../pages/Retail';
 import Misc from '../pages/Misc';
 
-
-
-
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
   render() {
