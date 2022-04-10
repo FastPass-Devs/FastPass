@@ -8,7 +8,7 @@ import { FiHome } from 'react-icons/fi';
 import { Stuffs } from '../../api/stuff/Stuff';
 import StuffItem from '../components/StuffItem';
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
-class Dashboard extends React.Component {
+class Entertainment extends React.Component {
 
   // If the subscription(s) have been received, render the page, otherwise show a loading icon.
   render() {
@@ -23,35 +23,10 @@ class Dashboard extends React.Component {
           <Grid.Row>
             <Header as="h5" style={{ opacity: '50%' }} textAlign="left"><FiHome/> / {this.props.currentUser} / Dashboard</Header>
           </Grid.Row>
-          <Grid.Row>
-            <Header as="h3" textAlign="left">Dashboard</Header>
-          </Grid.Row>
         </Grid>
-        <Grid columns='equal'>
+        <Grid>
           <Grid.Row>
-            <Grid.Column>
-              <Segment textAlign="right">Passwords
-                <Header>{this.props.numStuffs}</Header>
-              </Segment>
-            </Grid.Column>
-            <Grid.Column>
-              <Segment textAlign="right">Social
-                <Header>{this.props.numSocial}</Header>
-              </Segment>
-            </Grid.Column>
-            <Grid.Column>
-              <Segment textAlign="right">Retail
-                <Header>{this.props.numRetail}</Header>
-              </Segment>
-            </Grid.Column>
-            <Grid.Column>
-              <Segment textAlign="right">Entertainment
-                <Header>{this.props.numEntertainment}</Header>
-              </Segment>
-            </Grid.Column>
-          </Grid.Row>
-          <Grid.Row>
-            <Header as="h3" style={{ paddingTop: '10px' }} textAlign="left">Password List</Header>
+            <Header as="h3" style={{ paddingTop: '10px' }} textAlign="left">Entertainment Category: Password List</Header>
             <Link to="/add"><Button style={{ marginLeft: '10px' }} color="black">Add Button</Button></Link>
           </Grid.Row>
           <Grid.Row>
@@ -77,7 +52,7 @@ class Dashboard extends React.Component {
 }
 
 // Require an array of Stuff documents in the props.
-Dashboard.propTypes = {
+Entertainment.propTypes = {
   stuffs: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
   currentUser: PropTypes.string,
@@ -92,23 +67,14 @@ export default withTracker(() => {
   // Get the Stuff documents
   const currentUser = Meteor.user() ? Meteor.user().username : '';
 
-  const stuffs = Stuffs.collection.find({}).fetch();
-
-  const numStuffs = Stuffs.collection.find({}).count();
-
-  const numSocial = Stuffs.collection.find({ category: 'Social' }).count();
-
-  const numRetail = Stuffs.collection.find({ category: 'Retail' }).count();
+  const stuffs = Stuffs.collection.find({ category: 'Entertainment' }).fetch();
 
   const numEntertainment = Stuffs.collection.find({ category: 'Entertainment' }).count();
 
   return {
     stuffs,
-    numStuffs,
     ready,
     currentUser,
-    numSocial,
-    numRetail,
     numEntertainment,
   };
-})(Dashboard);
+})(Entertainment);
