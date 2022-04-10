@@ -7,12 +7,33 @@ import { Link } from 'react-router-dom';
 import { FiHome } from 'react-icons/fi';
 import { Stuffs } from '../../api/stuff/Stuff';
 import StuffItem from '../components/StuffItem';
+import { ExportToCsv } from 'export-to-csv';
+
+const options = { 
+    fieldSeparator: ',',
+    quoteStrings: '"',
+    decimalSeparator: '.',
+    showLabels: true, 
+    showTitle: true,
+    title: 'Retail Passwords List',
+    useTextFile: false,
+    filename: 'RetailPasswordsList',
+    useBom: true,
+    useKeysAsHeaders: true,
+    // headers: ['Column 1', 'Column 2', etc...] <-- Won't work with useKeysAsHeaders present!
+  };
+
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class Retail extends React.Component {
 
   // If the subscription(s) have been received, render the page, otherwise show a loading icon.
   render() {
     return (this.props.ready) ? this.renderPage() : <Loader active>Getting data</Loader>;
+  }
+
+  downloadData() {
+    const csvExporter = new ExportToCsv(options);
+    csvExporter.generateCsv(this.props.stuffs);
   }
 
   // Render the page once subscriptions have been received.
@@ -28,6 +49,7 @@ class Retail extends React.Component {
           <Grid.Row>
             <Header as="h3" style={{ paddingTop: '10px' }} textAlign="left">Retail Category: Password List</Header>
             <Link to="/add"><Button style={{ marginLeft: '10px' }} color="black">Add Button</Button></Link>
+            <Link to="#"><Button onClick={() => {this.downloadData()}} style={{ marginLeft: '10px' }} color="blue">Download List</Button></Link>
           </Grid.Row>
           <Grid.Row>
             <Table>
