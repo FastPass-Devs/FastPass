@@ -45,7 +45,7 @@ ___
 
 ### What is completed:
 * Meteor user collection schema
-* Initial Privacy Policy Page
+* Privacy Policy Page
 * Login system
 * Dashboard skeleteon
 * Home page

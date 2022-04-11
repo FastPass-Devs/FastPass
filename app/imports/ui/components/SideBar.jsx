@@ -41,10 +41,10 @@ class SideBar extends React.Component {
               <MenuItem icon={<AiOutlineEdit />}>Password Generator<Link to="/password-generator"/></MenuItem>
             </SubMenu>
             <SubMenu title="Categories" icon={<BiCategory />}>
-              <MenuItem icon={<TiSocialInstagram />}>Social<Link to="/add" /></MenuItem>
-              <MenuItem icon={<FiShoppingCart />}>Retail<Link to="/add" /></MenuItem>
-              <MenuItem icon={<MdOutlineTheaterComedy />}>Entertainment<Link to="/add" /></MenuItem>
-              <MenuItem icon={<CgPassword />}>Miscellaneous<Link to="/add" /></MenuItem>
+              <MenuItem icon={<TiSocialInstagram />}>Social<Link to="/social" /></MenuItem>
+              <MenuItem icon={<FiShoppingCart />}>Retail<Link to="/retail" /></MenuItem>
+              <MenuItem icon={<MdOutlineTheaterComedy />}>Entertainment<Link to="/entertainment" /></MenuItem>
+              <MenuItem icon={<CgPassword />}>Miscellaneous<Link to="/misc" /></MenuItem>
 
             </SubMenu>
             <SidebarHeader></SidebarHeader>

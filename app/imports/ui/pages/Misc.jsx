@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Grid, Segment, Button, Container, Table, Header, Loader } from 'semantic-ui-react';
+import { Grid, Button, Container, Table, Header, Loader } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -15,16 +15,16 @@ const options = {
   decimalSeparator: '.',
   showLabels: true,
   showTitle: true,
-  title: 'Passwords List',
+  title: 'Misc. Passwords List',
   useTextFile: false,
-  filename: 'PasswordsList',
+  filename: 'Misc.PasswordsList',
   useBom: true,
   useKeysAsHeaders: true,
   // headers: ['Column 1', 'Column 2', etc...] <-- Won't work with useKeysAsHeaders present!
 };
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
-class Dashboard extends React.Component {
+class Misc extends React.Component {
 
   // If the subscription(s) have been received, render the page, otherwise show a loading icon.
   render() {
@@ -44,35 +44,10 @@ class Dashboard extends React.Component {
           <Grid.Row>
             <Header as="h5" style={{ opacity: '50%' }} textAlign="left"><FiHome/> / {this.props.currentUser} / Dashboard</Header>
           </Grid.Row>
-          <Grid.Row>
-            <Header as="h3" textAlign="left">Dashboard</Header>
-          </Grid.Row>
         </Grid>
-        <Grid columns='equal'>
+        <Grid>
           <Grid.Row>
-            <Grid.Column>
-              <Segment textAlign="right">Passwords
-                <Header>{this.props.numStuffs}</Header>
-              </Segment>
-            </Grid.Column>
-            <Grid.Column>
-              <Segment textAlign="right">Social
-                <Header>{this.props.numSocial}</Header>
-              </Segment>
-            </Grid.Column>
-            <Grid.Column>
-              <Segment textAlign="right">Retail
-                <Header>{this.props.numRetail}</Header>
-              </Segment>
-            </Grid.Column>
-            <Grid.Column>
-              <Segment textAlign="right">Entertainment
-                <Header>{this.props.numEntertainment}</Header>
-              </Segment>
-            </Grid.Column>
-          </Grid.Row>
-          <Grid.Row>
-            <Header as="h3" style={{ paddingTop: '10px' }} textAlign="left">Password List</Header>
+            <Header as="h3" style={{ paddingTop: '10px' }} textAlign="left">Miscellaneous Category: Password List</Header>
             <Link to="/add"><Button style={{ marginLeft: '10px' }} color="black">Add Button</Button></Link>
             <Link to="#"><Button onClick={() => { this.downloadData(); }} style={{ marginLeft: '10px' }} color="blue">Download List</Button></Link>
           </Grid.Row>
@@ -99,15 +74,10 @@ class Dashboard extends React.Component {
 }
 
 // Require an array of Stuff documents in the props.
-Dashboard.propTypes = {
+Misc.propTypes = {
   stuffs: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
   currentUser: PropTypes.string,
-  numStuffs: PropTypes.number,
-  numSocial: PropTypes.number,
-  numEntertainment: PropTypes.number,
-  numRetail: PropTypes.number,
-
 };
 
 // withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
@@ -119,23 +89,14 @@ export default withTracker(() => {
   // Get the Stuff documents
   const currentUser = Meteor.user() ? Meteor.user().username : '';
 
-  const stuffs = Stuffs.collection.find({}).fetch();
+  const stuffs = Stuffs.collection.find({ category: 'Miscellaneous' }).fetch();
 
-  const numStuffs = Stuffs.collection.find({}).count();
-
-  const numSocial = Stuffs.collection.find({ category: 'Social' }).count();
-
-  const numRetail = Stuffs.collection.find({ category: 'Retail' }).count();
-
-  const numEntertainment = Stuffs.collection.find({ category: 'Entertainment' }).count();
+  const numMisc = Stuffs.collection.find({ category: 'Miscellaneous' }).count();
 
   return {
     stuffs,
-    numStuffs,
     ready,
     currentUser,
-    numSocial,
-    numRetail,
-    numEntertainment,
+    numMisc,
   };
-})(Dashboard);
+})(Misc);

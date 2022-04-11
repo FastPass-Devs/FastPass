@@ -24,7 +24,7 @@ class StuffItem extends React.Component {
 StuffItem.propTypes = {
   stuff: PropTypes.shape({
     username: PropTypes.string,
-    site: PropTypes.number,
+    site: PropTypes.string,
     password: PropTypes.string,
     category: PropTypes.string,
     notes: PropTypes.string,
