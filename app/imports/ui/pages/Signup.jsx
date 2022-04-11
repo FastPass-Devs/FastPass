@@ -67,6 +67,7 @@ class Signup extends React.Component {
                   type="password"
                   onChange={this.handleChange}
                 />
+                <p>Review our <a href='#/terms-of-service'>Terms of Service</a> & <a href='#/privacy-policy'>Privacy Policy</a></p>
                 <Form.Button id="signup-form-submit" content="Submit"/>
               </Segment>
             </Form>

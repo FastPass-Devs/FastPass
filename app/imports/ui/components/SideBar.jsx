@@ -27,6 +27,7 @@ class SideBar extends React.Component {
             <MenuItem icon={<FiLogIn />}>Sign in<Link to="/signin" /></MenuItem>
             <MenuItem icon={<CgProfile />}>Register<Link to="/signup" /></MenuItem>
             <MenuItem icon={<MdOutlinePrivacyTip />}>Privacy Policy<Link to="/privacy-policy" /></MenuItem>
+            <MenuItem icon={<MdOutlinePrivacyTip />}>Terms of Service<Link to="/terms-of-service" /></MenuItem>
           </Menu>
         ) : (
           <Menu iconShape="square">
