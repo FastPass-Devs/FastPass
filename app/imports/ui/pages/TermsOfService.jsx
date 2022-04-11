@@ -23,8 +23,8 @@ class TermsOfService extends React.Component {
         <Header as='h2'>User Representation</Header>
         <p>By using the site you that:</p>
         <List bulleted>
-          <List.Item>You have the legal capacity to comply with these Terms Of Service.</List.Item>
-          <List.Item>You agree to comply with these Terms Of Service.</List.Item>
+          <List.Item>You have the legal capacity to comply with these Terms of Service.</List.Item>
+          <List.Item>You agree to comply with these Terms of Service.</List.Item>
           <List.Item>All account information (such as your email) is true, accurate, and is belonging to you.</List.Item>
           <List.Item>You will not access the FastPass site with automated means (ex. bots, scripts, etc).</List.Item>
           <List.Item>You will not use the services of the FastPass site for any illegal or unauthorized activity.</List.Item>
@@ -47,13 +47,13 @@ class TermsOfService extends React.Component {
         <Header as='h2'>Site Management</Header>
         <p>We reserve the right to: </p>
         <List bulleted>
-          <List.Item>Monitor the site for any violations of the Terms Of Service.</List.Item>
+          <List.Item>Monitor the site for any violations of the Terms of Service.</List.Item>
           <List.Item>
-            Take legal action against anyone who, in our sole discretion, violates the law or the Terms Of Service.</List.Item>
+            Take legal action against anyone who, in our sole discretion, violates the law or the Terms of Service.</List.Item>
         </List>
         <Divider/>
         <Header as="h2">Privacy Policy</Header>
-        <p>Please review our <a href="#/privacy-policy">Privacy Policy</a>which details your privacy rights.  By using the FastPass site, you agree to be bound by Privacy Policy.  Note that the FastPass site is hosted within the United States.</p>
+        <p>Please review our <a href="#/privacy-policy">Privacy Policy</a> which details your privacy rights.  By using the FastPass site, you agree to be bound by Privacy Policy.  Note that the FastPass site is hosted within the United States.</p>
         <Divider/>
         <Header as="h2">Term and Termination</Header>
         <p>These Terms of Service shall remain in full effect while you use the FastPass site.  If we terminate your account, you are not allowed from registering and creating a new account with the same email address.
