@@ -7,7 +7,7 @@ Updated: 4/11/2022
 ## Assignment 4 (4/11/2022)
 
 ### Updated Progress
-* Export user's information
+* Generate and export user's information in .csv format
 * Expanding category display features
 * TOS Page
 
@@ -21,7 +21,7 @@ Updated: 4/11/2022
 
 ### New Completions
 * Anat - Fuzz testing analysis
-* Jolie - Static Analysis review, Export user's information, expanding category display features
+* Jolie - Static Analysis review, Export user's information in .csv format, Expanding category display features
 * Joshua - Fuzz testing analysis, TOS Page
 * Justin - Dynamic Analysis review, Testcafe testing
 
