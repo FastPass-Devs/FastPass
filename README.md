@@ -2,7 +2,41 @@
 
 # FastPass (ICS 427)
 
-Updated: 3/28/2022
+Updated: 4/11/2022
+
+## Assignment 4 (4/11/2022)
+
+### Updated Progress
+* Export user's information
+* Expanding category display features
+* TOS Page
+
+### Pending
+* Master password hint
+* Multi-factor authentication
+* Autofill login information
+* Encryption of data
+* Various bug fixes
+* AES-256 Encryption
+
+### New Completions
+* Anat - Fuzz testing analysis
+* Jolie - Static Analysis review, Export user's information, expanding category display features
+* Joshua - Fuzz testing analysis, TOS Page
+* Justin - Dynamic Analysis review, Testcafe testing
+
+### Current and Next
+* Anat - Button to copy login information
+* Jolie - AES-256 encryption
+* Joshua - Multi-factor authentication
+* Justin - Encryption of data, 0-knowledge encryption log in
+
+### Link
+* Repo: https://github.com/FastPass-Devs/FastPass/
+* Live site: http://fastpass.meteorapp.com/
+
+___
+# Old Section
 
 ## Assignment 3 (3/28/2022)
 
@@ -37,9 +71,6 @@ Updated: 3/28/2022
 * Jolie - Export user's information, expanding category display features
 * Joshua - TOS page, Multi-factor authentication
 * Justin - Encryption of data, 0-knowledge encryption log in
-
-___
-# Old Section
 
 ## Assignment 2 (2/21/2022)
 
