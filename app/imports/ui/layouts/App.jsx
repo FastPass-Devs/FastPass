@@ -9,13 +9,9 @@ import { Grid } from 'semantic-ui-react';
 import SideBar from '../components/SideBar';
 // import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
-import ListStuff from '../pages/ListStuff';
-import ListStuffAdmin from '../pages/ListStuffAdmin';
-import AddStuff from '../pages/AddStuff';
 import PrivacyPolicy from '../pages/PrivacyPolicy';
 import Dashboard from '../pages/Dashboard';
 import PasswordGenerator from '../pages/PasswordGenerator';
-import EditStuff from '../pages/EditStuff';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
@@ -44,16 +40,12 @@ class App extends React.Component {
                 <Route path="/signin" component={Signin}/>
                 <Route path="/signup" component={Signup}/>
                 <Route path="/signout" component={Signout}/>
-                <ProtectedRoute path="/list" component={ListStuff}/>
                 <ProtectedRoute path="/dashboard" component={Dashboard}/>
-                <ProtectedRoute path="/add" component={AddStuff}/>
-                <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
                 <ProtectedRoute path="/social" component={Social}/>
                 <ProtectedRoute path="/entertainment" component={Entertainment}/>
                 <ProtectedRoute path="/retail" component={Retail}/>
                 <ProtectedRoute path="/misc" component={Misc}/>
                 <ProtectedRoute path="/password-generator" component={PasswordGenerator}/>
-                <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
               </Grid.Column>
               <Route component={NotFound}/>
             </Switch>
