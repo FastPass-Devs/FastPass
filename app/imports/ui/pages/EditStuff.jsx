@@ -31,10 +31,11 @@ class EditStuff extends React.Component {
     return (
       <Grid container centered>
         <Grid.Column>
-          <Header as="h2" textAlign="center">Edit Stuff</Header>
+          <Header as="h2" textAlign="center">Edit Password</Header>
           <AutoForm schema={bridge} onSubmit={data => this.submit(data)} model={this.props.doc}>
             <Segment>
               <TextField name='site'/>
+              <TextField name='address'/>
               <TextField name='username'/>
               <TextField name='password'/>
               <TextField name='notes'/>
