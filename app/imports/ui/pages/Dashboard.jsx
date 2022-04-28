@@ -39,7 +39,7 @@ class Dashboard extends React.Component {
   // Render the page once subscriptions have been received.
   renderPage() {
     return (
-      <Container>
+      <Container style={{ position: "static"}}>
         <Grid>
           <Grid.Row>
             <Header as="h5" style={{ opacity: '50%' }} textAlign="left"><FiHome/> / {this.props.currentUser} / Dashboard</Header>

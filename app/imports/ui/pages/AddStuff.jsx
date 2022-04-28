@@ -10,6 +10,7 @@ import { Stuffs } from '../../api/stuff/Stuff';
 // Create a schema to specify the structure of the data to appear in the form.
 const formSchema = new SimpleSchema({
   username: String,
+  address: String,
   password: String,
   notes: String,
   site: String,
@@ -27,9 +28,9 @@ class AddStuff extends React.Component {
 
   // On submit, insert the data.
   submit(data, formRef) {
-    const { site, username, password, notes, category } = data;
+    const { site, address, username, password, notes, category } = data;
     const owner = Meteor.user().username;
-    Stuffs.collection.insert({ site, username, password, notes, category, owner },
+    Stuffs.collection.insert({ site, address, username, password, notes, category, owner },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
@@ -50,6 +51,7 @@ class AddStuff extends React.Component {
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
             <Segment>
               <TextField name='site'/>
+              <TextField name='address'/>
               <TextField name='username'/>
               <TextField name='password'/>
               <TextField name='notes'/>

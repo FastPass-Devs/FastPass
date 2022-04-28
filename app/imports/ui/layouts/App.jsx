@@ -32,12 +32,12 @@ class App extends React.Component {
     return (
       <Router>
         <div style={{ height: '100vw' }}>
-          <Grid style={{ width: '100vw', height: '100%' }}>
+          <Grid style={{ width: '100vw', height: '100vh' }}>
             <Grid.Column style={{ width: '30%' }}>
               <SideBar/>
             </Grid.Column>
             <Switch>
-              <Grid.Column style={{ width: '70%', paddingTop: '40px', height: '100%' }}>
+              <Grid.Column className="layout" style={{  width: '70%', paddingTop: '40px' }}>
                 <Route exact path="/" component={Landing}/>
                 <Route path="/privacy-policy" component={PrivacyPolicy}/>
                 <Route path="/terms-of-service" component={TermsOfService}/>

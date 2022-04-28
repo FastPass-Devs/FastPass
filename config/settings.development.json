@@ -5,10 +5,14 @@
   ],
 
   "defaultData": [
-    { "site": "Laulima", "username": "Test", "password": "42424", "notes": "this is my test", "category": "Social", "owner": "john@foo.com" },
-    { "site": "Netflix", "username": "secondTest", "password": "79797", "notes": "a second test", "category": "Retail", "owner": "john@foo.com"},
-    { "site": "Laulima", "username": "Test", "password": "42424", "notes": "this is my test", "category": "Social", "owner": "admin@foo.com" },
-    { "site": "Netflix", "username": "secondTest", "password": "79797", "notes": "a second test", "category": "Retail", "owner": "admin@foo.com"}
+    { "site": "Laulima", "address": "https://laulima.hawaii.edu/portal", "username": "LaulimaUser", "password": "LaulimaPass", "notes": "For school. Re-authenticate login every 7 days.", "category": "Miscellaneous", "owner": "john@foo.com" },
+    { "site": "Netflix", "address": "https://www.netflix.com/browse", "username": "NeflixUser", "password": "NetflixPass", "notes": "Two devices at a time.", "category": "Entertainment", "owner": "john@foo.com"},
+    { "site": "Amazon", "address": "https://www.amazon.com/", "username": "AmazonUser", "password": "AmazonPass", "notes": "This is my Amazon Password.", "category": "Retail", "owner": "john@foo.com" },
+    { "site": "Twitter", "address": "https://twitter.com/home?lang=en", "username": "TwitterUser", "password": "TwitterPass", "notes": "Password for my main account.", "category": "Entertainment", "owner": "john@foo.com"},
+    { "site": "Laulima", "address": "https://laulima.hawaii.edu/portal", "username": "LaulimaUser", "password": "LaulimaPass", "notes": "For school. Re-authenticate login every 7 days.", "category": "Miscellaneous", "owner": "admin@foo.com" },
+    { "site": "Netflix", "address": "https://www.netflix.com/browse", "username": "NeflixUser", "password": "NetflixPass", "notes": "Two devices at a time.", "category": "Entertainment", "owner": "admin@foo.com"},
+    { "site": "Amazon", "address": "https://www.amazon.com/", "username": "AmazonUser", "password": "AmazonPass", "notes": "This is my Amazon Password.", "category": "Retail", "owner": "admin@foo.com" },
+    { "site": "Twitter", "address": "https://twitter.com/home?lang=en", "username": "TwitterUser", "password": "TwitterPass", "notes": "Password for my main account.", "category": "Entertainment", "owner": "admin@foo.com"}
   ],
 
   "public": {

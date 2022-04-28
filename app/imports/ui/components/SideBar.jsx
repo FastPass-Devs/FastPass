@@ -19,7 +19,7 @@ import { MdOutlinePrivacyTip, MdOutlineTheaterComedy, MdPassword } from 'react-i
 class SideBar extends React.Component {
   render() {
     return (
-      <ProSidebar className="sidebar">
+      <ProSidebar style={{ position: "fixed", height: "100%" }} className="sidebar">
         {this.props.currentUser === '' ? (
           <Menu iconShape="square">
             <MenuItem textAlign="center" icon={<RiLockPasswordLine />}>Fast Pass<Link to="/" /></MenuItem>

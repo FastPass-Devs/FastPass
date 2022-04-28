@@ -15,8 +15,8 @@ class EditStuff extends React.Component {
 
   // On successful submit, insert the data.
   submit(data) {
-    const { site, username, password, notes, category, _id } = data;
-    Stuffs.collection.update(_id, { $set: { site, username, password, notes, category } }, (error) => (error ?
+    const { site, address, username, password, notes, category, _id } = data;
+    Stuffs.collection.update(_id, { $set: { site, address, username, password, notes, category } }, (error) => (error ?
       swal('Error', error.message, 'error') :
       swal('Success', 'Item updated successfully', 'success')));
   }
