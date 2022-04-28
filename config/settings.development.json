@@ -9,5 +9,12 @@
     { "site": "Netflix", "username": "secondTest", "password": "79797", "notes": "a second test", "category": "Retail", "owner": "john@foo.com"},
     { "site": "Laulima", "username": "Test", "password": "42424", "notes": "this is my test", "category": "Social", "owner": "admin@foo.com" },
     { "site": "Netflix", "username": "secondTest", "password": "79797", "notes": "a second test", "category": "Retail", "owner": "admin@foo.com"}
-  ]
+  ],
+
+  "public": {
+    "staleSessionInactivityTimeout": 1800000,
+    "staleSessionHeartbeatInterval": 180000,
+    "staleSessionPurgeInterval": 60000,
+    "staleSessionActivityEvents": "mousemove click keydown"
+  }
 }
