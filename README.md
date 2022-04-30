@@ -2,7 +2,35 @@
 
 # FastPass (ICS 427)
 
-Updated: 4/11/2022
+Updated: 4/29/2022
+
+## Assignment 5 (5/2/2022)
+
+### Team Progress
+* Anat - Final website deployment
+* Jolie - AES-256 encryption, Session timeout, copy to clipboard
+* Joshua - Multi-factor authentication
+* Justin - Removal of template files, TestCafe tests, Encryption of data, 0-knowledge encryption log in
+
+### Technical Notes (Specifications of use / Installation Instructions)
+
+### Brief Closing Thoughts
+TBA
+
+### Repository Link
+https://github.com/FastPass-Devs/FastPass
+
+### Final Project Documentation
+TBA
+
+### Released Website
+TBA
+
+### Wiki Page
+TBA
+
+___
+# Old Section
 
 ## Assignment 4 (4/11/2022)
 
@@ -34,9 +62,6 @@ Updated: 4/11/2022
 ### Link
 * Repo: https://github.com/FastPass-Devs/FastPass/
 * Live site: http://fastpass.meteorapp.com/
-
-___
-# Old Section
 
 ## Assignment 3 (3/28/2022)
 
