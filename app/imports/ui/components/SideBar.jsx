@@ -19,7 +19,7 @@ import { MdOutlinePrivacyTip, MdOutlineTheaterComedy, MdPassword } from 'react-i
 class SideBar extends React.Component {
   render() {
     return (
-      <ProSidebar style={{ position: "fixed", height: "100%" }} className="sidebar">
+      <ProSidebar style={{ position: 'fixed', height: '100%' }} className="sidebar">
         {this.props.currentUser === '' ? (
           <Menu iconShape="square">
             <MenuItem textAlign="center" icon={<RiLockPasswordLine />}>Fast Pass<Link to="/" /></MenuItem>
@@ -48,7 +48,7 @@ class SideBar extends React.Component {
 
             </SubMenu>
             <SidebarHeader></SidebarHeader>
-            <MenuItem icon={<BiCog />}>Settings</MenuItem>
+            <MenuItem icon={<BiCog />}>Settings<Link to="/multifactor-settings"/></MenuItem>
             <MenuItem icon={<FiLogOut />}>Logout<Link to="/signout" /></MenuItem>
           </Menu>
         )}
