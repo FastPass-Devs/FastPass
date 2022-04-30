@@ -13,6 +13,7 @@ Updated: 4/29/2022
 * Justin - Removal of template files, TestCafe tests, Encryption of data, 0-knowledge encryption log in
 
 ### Technical Notes (Specifications of use / Installation Instructions)
+TBA
 
 ### Brief Closing Thoughts
 TBA
