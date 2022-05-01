@@ -52,7 +52,7 @@ class MultiFactorAuthenticationSettings extends React.Component {
   render() {
     return (
       <Container>
-        <Header as="h1">Multi-factor Authentication Settings</Header>
+        <Header as="h1">Two-factor Authentication Settings</Header>
         <Segment>
           <Header as="h2">Want to enable 2FA? Follow these steps:</Header>
           <Divider/>
