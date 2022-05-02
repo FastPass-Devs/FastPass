@@ -32,9 +32,3 @@ test('Test Password generator', async (testController) => {
   await sideBar.gotoPasswordGenerator(testController);
   await passwordGenerator.genPassword(testController);
 });
-
-test('Test copying password', async (testController) => {
-  await sideBar.gotoSigninPage(testController);
-  await signinPage.signin(testController, credentials.username, credentials.password);
-  await dashboardPage.copy(testController);
-});
