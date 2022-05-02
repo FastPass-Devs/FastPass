@@ -12,23 +12,18 @@ class MultiFactorAuthenticationSettings extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { show2fa: true, qrCode: null, code: '' };
+    this.state = { show2fa: true, qrCode: null, code: '', status: '' };
+    Accounts.has2faEnabled((error, isEnabled) => {
+      if (error) {
+        console.log(error);
+      }
+      this.setState({ status: isEnabled });
+
+    });
   }
 
   handleChange = (e, { name, value }) => {
     this.setState({ [name]: value });
-  }
-
-  verify = () => {
-    const idk = Accounts.has2faEnabled();
-    console.log(idk);
-    Accounts.has2faEnabled((check) => {
-      if (check) {
-        console.log('true');
-      } else {
-        console.log('false');
-      }
-    });
   }
 
   submit = () => {
@@ -38,6 +33,13 @@ class MultiFactorAuthenticationSettings extends React.Component {
         swal('Error', error.message, 'error');
       } else {
         swal('Success', '2FA Enabled!', 'success');
+        Accounts.has2faEnabled((error1, isEnabled) => {
+          if (error1) {
+            console.log(error1);
+          }
+          this.setState({ status: isEnabled });
+
+        });
       }
     });
 
@@ -72,6 +74,13 @@ class MultiFactorAuthenticationSettings extends React.Component {
             swal('Error', error.message, 'error');
           } else {
             swal('Success', '2FA Disabled', 'success');
+            Accounts.has2faEnabled((error1, isEnabled) => {
+              if (error1) {
+                console.log(error1);
+              }
+              this.setState({ status: isEnabled });
+
+            });
           }
         });
       }
@@ -85,7 +94,7 @@ class MultiFactorAuthenticationSettings extends React.Component {
         <Header as="h1">Two-factor Authentication Settings</Header>
         <Segment>
           <Header as="h3">2FA Status</Header>
-          {Accounts.has2faEnabled() ?
+          {this.state.status === true ?
             <Header as="h4"><Icon circular color="green" name="check circle"/>2FA Enabled!</Header> :
             <Header as="h4"><Icon circular color="orange" name="warning circle"/>2FA Not Enabled!</Header>}
         </Segment>
@@ -127,16 +136,14 @@ class MultiFactorAuthenticationSettings extends React.Component {
 // Require an array of Stuff documents in the props.
 MultiFactorAuthenticationSettings.propTypes = {
   currentUser: PropTypes.string.isRequired,
-  status2fa: PropTypes.bool,
 };
 
 // withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
 export default withTracker(() => {
   // Get access current user.
   const currentUser = Meteor.user() ? Meteor.user().username : '';
-  const status2fa = Accounts.has2faEnabled();
+
   return {
     currentUser,
-    status2fa,
   };
 })(MultiFactorAuthenticationSettings);
