@@ -9,11 +9,17 @@ import { Stuffs } from '../../api/stuff/Stuff';
 
 // Create a schema to specify the structure of the data to appear in the form.
 const formSchema = new SimpleSchema({
-  username: String,
-  address: String,
-  password: String,
-  notes: String,
   site: String,
+  username: String,
+  password: String,
+  address: {
+    type: String,
+    optional: true,
+  },
+  notes: {
+    type: String,
+    optional: true,
+  },
   category: {
     type: String,
     allowedValues: ['Social', 'Retail', 'Entertainment', 'Miscellaneous'],

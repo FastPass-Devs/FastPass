@@ -84,18 +84,18 @@ class PasswordGenerator extends React.Component {
           <AutoForm schema={bridge} onSubmit={data => this.setValues(data)}>
             <Segment>
               <NumField name='length' decimal={false}/>
-              <BoolField name='isLowerCase' label='Lower Case'/>
-              <BoolField name='isUpperCase' label='Upper Case'/>
-              <BoolField name='hasNumbers' label='Numbers'/>
-              <BoolField name='hasSymbols' label='Symbols'/>
-              <SubmitField value='Submit'/>
+              <BoolField id='password-lower-case' name='isLowerCase' label='Lower Case'/>
+              <BoolField id='password-upper-case' name='isUpperCase' label='Upper Case'/>
+              <BoolField id='password-numbers' name='hasNumbers' label='Numbers'/>
+              <BoolField id='password-symbols' name='hasSymbols' label='Symbols'/>
+              <SubmitField id='password-submit' value='Submit'/>
               <ErrorsField/>
             </Segment>
           </AutoForm>
         </Grid.Row>
         <Header as="h3" textAlign="center">Your Generated Password:</Header>
         <Grid.Row>
-          <Segment textAlign='center'>{this.state.password}</Segment>
+          <Segment id='generated-password' textAlign='center'>{this.state.password}</Segment>
         </Grid.Row>
       </Grid>
     );
