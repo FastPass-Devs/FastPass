@@ -54,7 +54,7 @@ class App extends React.Component {
                 <ProtectedRoute path="/retail" component={Retail}/>
                 <ProtectedRoute path="/misc" component={Misc}/>
                 <ProtectedRoute path="/password-generator" component={PasswordGenerator}/>
-                <ProtectedRoute path="/multifactor-settings" component={MultiFactorAuthenticationSettings}/>
+                <ProtectedRoute path="/two-factor-settings" component={MultiFactorAuthenticationSettings}/>
                 <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
               </Grid.Column>
               <Route component={NotFound}/>

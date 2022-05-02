@@ -53,11 +53,8 @@ export default class Signin extends React.Component {
       return <Redirect to={from}/>;
     }
     const panes = [
-      { menuItem: 'Signin', render: () => <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
+      { menuItem: 'Signin', render: () => <Tab.Pane attached="bottom"> <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
         <Grid.Column>
-          <Header as="h2" textAlign="center">
-                    Login to your account
-          </Header>
           <Form onSubmit={this.submit}>
             <Segment stacked>
               <Form.Input
@@ -96,12 +93,9 @@ export default class Signin extends React.Component {
             />
           )}
         </Grid.Column>
-      </Grid> },
-      { menuItem: 'Signin w/2fa (if enabled)', render: () => <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
+      </Grid> </Tab.Pane> },
+      { menuItem: 'Signin w/ 2FA (if enabled)', render: () => <Tab.Pane attached="bottom"> <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
         <Grid.Column>
-          <Header as="h2" textAlign="center">
-                    Login to your account with 2FA
-          </Header>
           <Form onSubmit={this.submit2fa}>
             <Segment stacked>
               <Form.Input
@@ -150,12 +144,15 @@ export default class Signin extends React.Component {
             />
           )}
         </Grid.Column>
-      </Grid> },
+      </Grid> </Tab.Pane> },
     ];
     // Otherwise return the Login form.
     return (
       <Container id="signin-page">
-        <Tab panes={panes}/>
+        <Header as="h2" textAlign="center">
+          Login to your account
+        </Header>
+        <Tab menu={{ attached: 'top' }} panes={panes}/>
       </Container>
     );
   }

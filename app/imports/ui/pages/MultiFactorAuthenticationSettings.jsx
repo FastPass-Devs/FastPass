@@ -91,7 +91,7 @@ class MultiFactorAuthenticationSettings extends React.Component {
   render() {
     return (
       <Container>
-        <Header as="h1">Two-factor Authentication Settings</Header>
+        <Header as="h1">Two-Factor Authentication Settings</Header>
         <Segment>
           <Header as="h3">2FA Status</Header>
           {this.state.status === true ?
@@ -99,9 +99,10 @@ class MultiFactorAuthenticationSettings extends React.Component {
             <Header as="h4"><Icon circular color="orange" name="warning circle"/>2FA Not Enabled!</Header>}
         </Segment>
         <Segment>
-          <Header as="h2">Want to enable 2FA? Follow these steps:</Header>
+          <Header as="h2">Enable 2FA:</Header>
           <Divider/>
-          <Header as="h3">1. Get a QR code by clicking the button below and scan it in <b>Google Authenticator</b></Header>
+          <Header as="h3">1. Get a QR code by clicking the button below and scan it in the
+            <a href="https://support.google.com/accounts/answer/1066447?hl=en&co=GENIE.Platform%3DiOS#:~:text=On%20your%20new%20phone%2C%20tap,accounts%20from%20your%20old%20phone."> Google Authenticator </a> mobile app</Header>
           <Button onClick={this.activate2fa}> Generate QR code</Button>
           {(this.state.qrCode === null) ? '' :
             <Image size="medium" width="20" src={`data:image/svg+xml;base64,${this.state.qrCode}`}/>}
@@ -121,10 +122,11 @@ class MultiFactorAuthenticationSettings extends React.Component {
             <Form.Button id="code-input-submit" content="Submit"/>
           </Form>
           <Divider/>
-          <Header as="h3">3. In the future, use the 2FA log-in and provide the Google Authenticator code along with your email and password. </Header>
+          <Header as="h3">3. Your account is now protected with 2FA! </Header>
+          <Header as="h4">In the future, use the 2FA log-in and provide the Google Authenticator code along with your email and password.</Header>
         </Segment>
         <Segment>
-          <Header as="h3">Disable 2FA</Header>
+          <Header as="h2">Disable 2FA:</Header>
           <Button color="red" onClick={this.disable2fa}><Icon name="close"/>Turn off 2FA</Button>
         </Segment>
       </Container>
