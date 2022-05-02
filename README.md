@@ -9,7 +9,7 @@ Updated: 4/29/2022
 ### Team Progress
 * Anat - Final website deployment
 * Jolie - AES-256 encryption, Session timeout, copy to clipboard
-* Joshua - Multi-factor authentication
+* Joshua - Multi-factor/2-Factor authentication
 * Justin - Removal of template files, TestCafe tests, Encryption of data, 0-knowledge encryption log in
 
 ### Technical Notes (Specifications of use / Installation Instructions)
@@ -42,7 +42,7 @@ ___
 
 ### Pending
 * Master password hint
-* Multi-factor authentication
+* Multi-factor/2-Factor authentication
 * Autofill login information
 * Encryption of data
 * Various bug fixes
@@ -57,7 +57,7 @@ ___
 ### Current and Next
 * Anat - Button to copy login information
 * Jolie - AES-256 encryption
-* Joshua - Multi-factor authentication
+* Joshua - Multi-factor/2-Factor authentication
 * Justin - Encryption of data, 0-knowledge encryption log in
 
 ### Link
@@ -79,7 +79,7 @@ ___
 
 ### Pending
 * Master password hint
-* Multi-factor authentication
+* Multi-factor/2-Factor authentication
 * Autofill login information
 * Export user's information
 * Encryption of data
@@ -95,7 +95,7 @@ ___
 ### Current and Next
 * Anat - Button to copy login information
 * Jolie - Export user's information, expanding category display features
-* Joshua - TOS page, Multi-factor authentication
+* Joshua - TOS page, Multi-factor/2-Factor authentication
 * Justin - Encryption of data, 0-knowledge encryption log in
 
 ## Assignment 2 (2/21/2022)
@@ -115,7 +115,7 @@ ___
 * Category display
 * Testcafe testing
 * Master password hint
-* Multi-factor authentication
+* Multi-factor/2-Factor authentication
 * Autofill login information
 * Export user's information
 * Encryption of data
