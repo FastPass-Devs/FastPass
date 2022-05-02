@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import { Buffer } from 'buffer';
 import { Accounts } from 'meteor/accounts-base';
 
-/** Page to adjust Multi-factor Authentication Settings. */
+/** Page to adjust Multi-factor/2-Factor Authentication Settings. */
 class MultiFactorAuthenticationSettings extends React.Component {
 
   constructor(props) {

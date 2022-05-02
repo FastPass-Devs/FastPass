@@ -22,7 +22,7 @@ class SideBar extends React.Component {
       <ProSidebar style={{ position: 'fixed', height: '100%' }} className="sidebar">
         {this.props.currentUser === '' ? (
           <Menu iconShape="square">
-            <MenuItem textAlign="center" icon={<RiLockPasswordLine />}>Fast Pass<Link to="/" /></MenuItem>
+            <MenuItem icon={<RiLockPasswordLine />}>Fast Pass<Link to="/" /></MenuItem>
             <SidebarHeader></SidebarHeader>
             <MenuItem icon={<FiLogIn />}>Sign in<Link to="/signin" /></MenuItem>
             <MenuItem icon={<CgProfile />}>Register<Link to="/signup" /></MenuItem>
@@ -31,9 +31,9 @@ class SideBar extends React.Component {
           </Menu>
         ) : (
           <Menu iconShape="square">
-            <MenuItem textAlign="center" icon={<RiLockPasswordLine />}>Fast Pass<Link to="/" /></MenuItem>
+            <MenuItem icon={<RiLockPasswordLine />}>Fast Pass<Link to="/" /></MenuItem>
             <SidebarHeader></SidebarHeader>
-            <MenuItem textAlign="center" icon={<CgProfile />}>{this.props.currentUser}</MenuItem>
+            <MenuItem icon={<CgProfile />}>{this.props.currentUser}</MenuItem>
             <SidebarHeader></SidebarHeader>
             <MenuItem icon={<FiHome />}>Dashboard<Link to="/dashboard"/></MenuItem>
             <SubMenu title="Passwords" icon={<MdPassword />}>

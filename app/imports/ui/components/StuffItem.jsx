@@ -6,16 +6,19 @@ import { withRouter, Link } from 'react-router-dom';
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class StuffItem extends React.Component {
 
-  copy() {
+  copy = () => {
+    // eslint-disable-next-line no-undef
     navigator.clipboard.writeText(this.props.stuff.password);
-    alert("Your password has been copied to the clipboard.")
+    // eslint-disable-next-line no-undef
+    alert('Your password has been copied to the clipboard.');
   }
+
   render() {
     return (
       <Table.Row>
         <Table.Cell><a href={this.props.stuff.address}>{this.props.stuff.site}</a></Table.Cell>
         <Table.Cell>{this.props.stuff.username}</Table.Cell>
-        <Table.Cell><Button onClick={() => {this.copy();}} color="red">Copy to Clipboard</Button></Table.Cell>
+        <Table.Cell><Button onClick={this.copy} color="red">Copy to Clipboard</Button></Table.Cell>
         <Table.Cell>{this.props.stuff.notes}</Table.Cell>
         <Table.Cell>
           <Link to={`/edit/${this.props.stuff._id}`}>Edit</Link>
