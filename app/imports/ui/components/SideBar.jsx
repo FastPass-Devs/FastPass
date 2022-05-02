@@ -48,7 +48,7 @@ class SideBar extends React.Component {
 
             </SubMenu>
             <SidebarHeader></SidebarHeader>
-            <MenuItem icon={<BiCog />}>Settings</MenuItem>
+            <MenuItem icon={<BiCog />}>2FA Settings<Link to="/multifactor-settings"/></MenuItem>
             <MenuItem id="logout" icon={<FiLogOut />}>Logout<Link to="/signout" /></MenuItem>
           </Menu>
         )}
