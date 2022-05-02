@@ -19,6 +19,18 @@ class MultiFactorAuthenticationSettings extends React.Component {
     this.setState({ [name]: value });
   }
 
+  verify = () => {
+    const idk = Accounts.has2faEnabled();
+    console.log(idk);
+    Accounts.has2faEnabled((check) => {
+      if (check) {
+        console.log('true');
+      } else {
+        console.log('false');
+      }
+    });
+  }
+
   submit = () => {
     const { code } = this.state;
     Accounts.enableUser2fa(code, (error) => {
@@ -48,11 +60,35 @@ class MultiFactorAuthenticationSettings extends React.Component {
     );
   }
 
+  disable2fa = () => {
+    swal({
+      text: 'Do you want to disable 2FA?',
+      icon: 'info',
+      buttons: true,
+    }).then((confirmDisable) => {
+      if (confirmDisable) {
+        Accounts.disableUser2fa((error) => {
+          if (error) {
+            swal('Error', error.message, 'error');
+          } else {
+            swal('Success', '2FA Disabled', 'success');
+          }
+        });
+      }
+    });
+  }
+
   // Render page.
   render() {
     return (
       <Container>
         <Header as="h1">Two-factor Authentication Settings</Header>
+        <Segment>
+          <Header as="h3">2FA Status</Header>
+          {Accounts.has2faEnabled() ?
+            <Header as="h4"><Icon circular color="green" name="check circle"/>2FA Enabled!</Header> :
+            <Header as="h4"><Icon circular color="orange" name="warning circle"/>2FA Not Enabled!</Header>}
+        </Segment>
         <Segment>
           <Header as="h2">Want to enable 2FA? Follow these steps:</Header>
           <Divider/>
@@ -76,10 +112,11 @@ class MultiFactorAuthenticationSettings extends React.Component {
             <Form.Button id="code-input-submit" content="Submit"/>
           </Form>
           <Divider/>
-          <Header as="h3">2FA Status</Header>
-          {this.status2fa === true ?
-            <Header as="h4"><Icon circular color="green" name="check circle"/>2FA Enabled!</Header> :
-            <Header as="h4"><Icon circular color="orange" name="warning circle"/>2FA Not Enabled!</Header>}
+          <Header as="h3">3. In the future, use the 2FA log-in and provide the Google Authenticator code along with your email and password. </Header>
+        </Segment>
+        <Segment>
+          <Header as="h3">Disable 2FA</Header>
+          <Button color="red" onClick={this.disable2fa}><Icon name="close"/>Turn off 2FA</Button>
         </Segment>
       </Container>
     );
