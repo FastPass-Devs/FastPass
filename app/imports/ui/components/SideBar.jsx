@@ -24,7 +24,7 @@ class SideBar extends React.Component {
           <Menu iconShape="square">
             <MenuItem icon={<RiLockPasswordLine />}>Fast Pass<Link to="/" /></MenuItem>
             <SidebarHeader></SidebarHeader>
-            <MenuItem icon={<FiLogIn />}>Sign in<Link to="/signin" /></MenuItem>
+            <MenuItem id="sign-in" icon={<FiLogIn />}>Sign in<Link to="/signin" /></MenuItem>
             <MenuItem icon={<CgProfile />}>Register<Link to="/signup" /></MenuItem>
             <MenuItem icon={<MdOutlinePrivacyTip />}>Privacy Policy<Link to="/privacy-policy" /></MenuItem>
             <MenuItem icon={<MdOutlinePrivacyTip />}>Terms of Service<Link to="/terms-of-service" /></MenuItem>
@@ -33,12 +33,12 @@ class SideBar extends React.Component {
           <Menu iconShape="square">
             <MenuItem icon={<RiLockPasswordLine />}>Fast Pass<Link to="/" /></MenuItem>
             <SidebarHeader></SidebarHeader>
-            <MenuItem icon={<CgProfile />}>{this.props.currentUser}</MenuItem>
+            <MenuItem id="current-user" textAlign="center" icon={<CgProfile />}>{this.props.currentUser}</MenuItem>
             <SidebarHeader></SidebarHeader>
             <MenuItem icon={<FiHome />}>Dashboard<Link to="/dashboard"/></MenuItem>
-            <SubMenu title="Passwords" icon={<MdPassword />}>
+            <SubMenu id="menu-passwords" title="Passwords" icon={<MdPassword />}>
               <MenuItem icon={<AiOutlineEdit />}>Add<Link to="/add" /></MenuItem>
-              <MenuItem icon={<AiOutlineEdit />}>Password Generator<Link to="/password-generator"/></MenuItem>
+              <MenuItem id="password-generator" icon={<AiOutlineEdit />}>Password Generator<Link to="/password-generator"/></MenuItem>
             </SubMenu>
             <SubMenu title="Categories" icon={<BiCategory />}>
               <MenuItem icon={<TiSocialInstagram />}>Social<Link to="/social" /></MenuItem>
@@ -48,8 +48,8 @@ class SideBar extends React.Component {
 
             </SubMenu>
             <SidebarHeader></SidebarHeader>
-            <MenuItem icon={<BiCog />}>Settings<Link to="/multifactor-settings"/></MenuItem>
-            <MenuItem icon={<FiLogOut />}>Logout<Link to="/signout" /></MenuItem>
+            <MenuItem icon={<BiCog />}>Settings</MenuItem>
+            <MenuItem id="logout" icon={<FiLogOut />}>Logout<Link to="/signout" /></MenuItem>
           </Menu>
         )}
       </ProSidebar>

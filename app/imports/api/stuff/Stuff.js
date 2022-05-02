@@ -17,7 +17,10 @@ class StuffsCollection {
       address: String,
       username: String,
       password: String,
-      notes: String,
+      notes: {
+        type: String,
+        optional: true,
+      },
       category: {
         type: String,
         allowedValues: ['Social', 'Retail', 'Entertainment', 'Miscellaneous'],
