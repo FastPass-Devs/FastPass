@@ -102,7 +102,7 @@ class MultiFactorAuthenticationSettings extends React.Component {
           <Header as="h2">Enable 2FA:</Header>
           <Divider/>
           <Header as="h3">1. Get a QR code by clicking the button below and scan it in the
-            <a href="https://support.google.com/accounts/answer/1066447?hl=en&co=GENIE.Platform%3DiOS#:~:text=On%20your%20new%20phone%2C%20tap,accounts%20from%20your%20old%20phone."> Google Authenticator </a> mobile app</Header>
+            <a href="https://support.google.com/accounts/answer/1066447?hl=en&co=GENIE.Platform%3DiOS#:~:text=On%20your%20new%20phone%2C%20tap,accounts%20from%20your%20old%20phone."> Google Authenticator </a> mobile app:</Header>
           <Button onClick={this.activate2fa}> Generate QR code</Button>
           {(this.state.qrCode === null) ? '' :
             <Image size="medium" width="20" src={`data:image/svg+xml;base64,${this.state.qrCode}`}/>}
