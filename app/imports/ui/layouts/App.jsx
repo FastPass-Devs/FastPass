@@ -15,6 +15,7 @@ import AddStuff from '../pages/AddStuff';
 import PrivacyPolicy from '../pages/PrivacyPolicy';
 import Dashboard from '../pages/Dashboard';
 import PasswordGenerator from '../pages/PasswordGenerator';
+import MultiFactorAuthenticationSettings from '../pages/MultiFactorAuthenticationSettings';
 import EditStuff from '../pages/EditStuff';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
@@ -37,7 +38,7 @@ class App extends React.Component {
               <SideBar/>
             </Grid.Column>
             <Switch>
-              <Grid.Column className="layout" style={{  width: '70%', paddingTop: '40px' }}>
+              <Grid.Column className="layout" style={{ width: '70%', paddingTop: '40px' }}>
                 <Route exact path="/" component={Landing}/>
                 <Route path="/privacy-policy" component={PrivacyPolicy}/>
                 <Route path="/terms-of-service" component={TermsOfService}/>
@@ -53,6 +54,7 @@ class App extends React.Component {
                 <ProtectedRoute path="/retail" component={Retail}/>
                 <ProtectedRoute path="/misc" component={Misc}/>
                 <ProtectedRoute path="/password-generator" component={PasswordGenerator}/>
+                <ProtectedRoute path="/multifactor-settings" component={MultiFactorAuthenticationSettings}/>
                 <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
               </Grid.Column>
               <Route component={NotFound}/>

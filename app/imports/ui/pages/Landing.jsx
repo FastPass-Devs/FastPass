@@ -36,10 +36,10 @@ class Landing extends React.Component {
       return <Redirect to={from}/>;
     }
     return (
-      <div style={{ paddingTop: "40px", position: "static"}} className= "landing">
-        <Grid style={{ paddingTop: "40px"}} id='landing-page' verticalAlign='middle' textAlign='center' container>
+      <div style={{ paddingTop: '40px', position: 'static' }} className= "landing">
+        <Grid style={{ paddingTop: '40px' }} id='landing-page' verticalAlign='middle' textAlign='center' container>
           <Grid.Column width={4}>
-            <Image class= "ui top aligned tiny image" src="/images/myOtherLock.png" />
+            <Image verticalAlign='top' size='medium' src="/images/myOtherLock.png" />
 
           </Grid.Column>
           <Grid.Column width={6}>
@@ -87,7 +87,7 @@ class Landing extends React.Component {
 
           </Grid.Column>
           <Grid.Column width={4}>
-        </Grid.Column>
+          </Grid.Column>
         </Grid>
       </div>
     );

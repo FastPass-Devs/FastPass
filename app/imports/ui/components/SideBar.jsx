@@ -19,10 +19,10 @@ import { MdOutlinePrivacyTip, MdOutlineTheaterComedy, MdPassword } from 'react-i
 class SideBar extends React.Component {
   render() {
     return (
-      <ProSidebar style={{ position: "fixed", height: "100%" }} className="sidebar">
+      <ProSidebar style={{ position: 'fixed', height: '100%' }} className="sidebar">
         {this.props.currentUser === '' ? (
           <Menu iconShape="square">
-            <MenuItem textAlign="center" icon={<RiLockPasswordLine />}>Fast Pass<Link to="/" /></MenuItem>
+            <MenuItem icon={<RiLockPasswordLine />}>Fast Pass<Link to="/" /></MenuItem>
             <SidebarHeader></SidebarHeader>
             <MenuItem id="sign-in" icon={<FiLogIn />}>Sign in<Link to="/signin" /></MenuItem>
             <MenuItem icon={<CgProfile />}>Register<Link to="/signup" /></MenuItem>
@@ -31,7 +31,7 @@ class SideBar extends React.Component {
           </Menu>
         ) : (
           <Menu iconShape="square">
-            <MenuItem textAlign="center" icon={<RiLockPasswordLine />}>Fast Pass<Link to="/" /></MenuItem>
+            <MenuItem icon={<RiLockPasswordLine />}>Fast Pass<Link to="/" /></MenuItem>
             <SidebarHeader></SidebarHeader>
             <MenuItem id="current-user" textAlign="center" icon={<CgProfile />}>{this.props.currentUser}</MenuItem>
             <SidebarHeader></SidebarHeader>
