@@ -8,7 +8,7 @@ Updated: 4/29/2022
 
 ### Team Progress
 * Anat - Final website deployment
-* Jolie - AES-256 encryption, Session timeout, copy to clipboard
+* Jolie - Session timeout, copy to clipboard, site address hyperlink & collection
 * Joshua - Multi-factor/2-Factor authentication
 * Justin - Removal of template files, TestCafe tests, Encryption of data, 0-knowledge encryption log in
 
