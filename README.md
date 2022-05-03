@@ -12,8 +12,25 @@ Updated: 4/29/2022
 * Joshua - Multi-factor/2-Factor authentication
 * Justin - Removal of template files, TestCafe tests, Encryption of data, 0-knowledge encryption log in
 
-### Technical Notes (Specifications of use / Installation Instructions)
-TBA
+### Technical Notes
+#### Specification of use:
+1. The site can easily be accessed through your preferred web browser of choice.
+2. Upon reaching the landing page of the site, you will be prompted to create their account by providing a valid email address and password.
+3. Once the account has been made, you will be presented with a form to add in your first password to save (this can be for any site).  If you wish not to add any password at the moment, you can alternatively navigate to the dashboard in the sidebar.
+4. The dashboard presents all the password items that you have saved and created.  Here, you can click a button to copy the password to your clipboard or you can edit the contents of each password item.
+5. In the "Add" tab of the sidebar, you can add in additional passwords to save under your account or use the included password generator.
+6. You can also alternatively view all your passwords from the categories tab in the sidebar which sorts your saved password based on whehter it is entertainment, social, retail, or miscellaneous.
+7. To enable 2FA for you account, install the "Google Authenticator" app on your mobile device and navigate to the "2FA Settings" in the sidebar.  From there, follow the steps presented in the page.  If successful, future log-ins will require you to input the generated code from "Google Authenticator" alongside your email and password.
+
+#### Local Installation Instructions:
+1. Install at minimum MeteorJS v.2.7.1 and NodeJS v.12.
+2. Clone the FastPass repository.
+3. In your terminal or command prompt, navigate to the FastPass directory.
+4. Navigate to the app directory and run "meteor npm install" to install 3rd party packages.
+5. Run the site locally by running "meteor npm run start"
+6. Navigate to your web browser and visit the site at the url, "http://localhost:3000/#/"
+7. To stop the site from running locally, hit "control-c" in the terminal.
+NOTE: The site can alternatively be viewed from the url in the "Released Website" section.
 
 ### Brief Closing Thoughts
 TBA
