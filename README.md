@@ -44,7 +44,7 @@ NOTE: The site can alternatively be viewed from the url in the "Released Website
 https://github.com/FastPass-Devs/FastPass
 
 ### Final Project Documentation
-TBA
+https://github.com/FastPass-Devs/FastPass/blob/master/doc/FastPass-Report.pdf
 
 ### Released Website
 https://fast-pass.meteorapp.com/
