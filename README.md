@@ -28,12 +28,12 @@ Updated: 4/29/2022
 3. In your terminal or command prompt, navigate to the FastPass directory.
 4. Navigate to the app directory and run "meteor npm install" to install 3rd party packages.
 5. Run the site locally by running "meteor npm run start"
-6. Navigate to your web browser and visit the site at the url, "http://localhost:3000/#/"
+6. Navigate to your web browser and visit the site at the url, "http://localhost:3000/#/".
 7. To stop the site from running locally, hit "control-c" in the terminal.
 NOTE: The site can alternatively be viewed from the url in the "Released Website" section.
 
 ### Brief Closing Thoughts
-* One of the accomplishments that we were proud of was how we handled how password items in the NoSQL database was stored in saved. When running the website and viewing the terminal, any password item was concealed (by defining it as "undefined") and within the dashboard, any password was not explicitly presented. We were also successful in preventing any indirect object reference vulnerabilities which meant that no one could view a password item simply by entering an id for the "Edit Login" form. The protection password items was considered important to us as a team considering how sensitive of an information it is.
+* One of the accomplishments that we were proud of was how we handled how password items in the NoSQL database was stored in saved. When running the website and viewing the terminal, any password item was concealed (by defining it as "undefined") and within the dashboard, any password was not explicitly presented. We were also successful in preventing any indirect object reference vulnerabilities which meant that no one could view a password item simply by entering an id for the "Edit Login" form. The protection of password items was considered important to us as a team, considering how valuable this piece of information can be.
 * Another accomplishment that we would like to note was being able to successfully implement the ability export passwords as a .csv file. This fulfilled our original vision of being able to exports passwords offline.
 * We also were able to implement a functional password generator with the ability to adjust how many characters that it has as well as whether or not it includes lowercase letters, uppercase letters, numbers, and/or symbols. However, a minor feature that we weren't able implement in time but would have liked to added in the future is to be able to copy the generated password to the clipboard.
 * Additionally, we were also proud of being able to implement two-factor authentication using Meteor's "accounts 2-fa" package. This feature was perhaps challenging as it was a relatively recent package as part of Meteor 2.7 and hence, documentations of its functions and methods were limited. Nonetheless, we were able to enable users to activate 2FA for their accounts if they so choose.
