@@ -26,8 +26,8 @@ Updated: 4/29/2022
 1. Install at minimum MeteorJS v.2.7.1 and NodeJS v.12.
 2. Clone the FastPass repository.
 3. In your terminal or command prompt, navigate to the FastPass directory.
-4. Navigate to the app directory and run "meteor npm install" to install 3rd party packages.
-5. Run the site locally by running "meteor npm run start"
+4. Navigate to the app directory and invoke "meteor npm install" to install 3rd party packages.
+5. Run the site locally by running "meteor npm run start".
 6. Navigate to your web browser and visit the site at the url, "http://localhost:3000/#/".
 7. To stop the site from running locally, hit "control-c" in the terminal.
 NOTE: The site can alternatively be viewed from the url in the "Released Website" section.
